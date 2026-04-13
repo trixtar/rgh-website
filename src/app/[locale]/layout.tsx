@@ -1,10 +1,11 @@
-import { routing } from "@/i18n/routing";
+import { Locale, routing } from "@/i18n/routing";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getSeoUrls } from "@/lib/seo";
+import Navbar from "@/components/ui/Navbar";
 import "../globals.css";
-import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,16 +21,20 @@ export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale, namespace: 'metadata' }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
 
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const urls = getSeoUrls('/');
 
   return {
-    title: {
-      default: t('title'),
-    },
+    title: t('title'),
     description: t('description'),
+
+    alternates: {
+      canonical: urls[locale],
+      languages: urls,
+    },
 
     openGraph: {
       title: t('ogTitle'),
@@ -65,7 +70,7 @@ export default async function LocaleLayout({ children, params }: {
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <LanguageSwitcher />
+          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>
