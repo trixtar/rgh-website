@@ -5,13 +5,29 @@
     "ogTitle": "Rita Gonzalez Hesaynes",
     "ogDescription": "Poeta, programadora y traductora argentina basada en Berlín."
   },
-  "homepage": {
-    "title": "Página Principal"
-  },
-   "menu": {
-    "intro": "Intro",
+  "menu": {
+    "bio": "Bio",
     "publishedWorks": "Obras publicadas",
     "performance": "Performance",
     "contact": "Contacto"
+  },
+  "homepage": {
+    "title": "Página Principal"
+  },
+  "bio": {
+    "title": "Bio",
+    "text": "Este es el último texto que los ubérrimos profetas declararon para la santísima gloria del Señor."
+  },
+  "works": {
+    "title": "Obras publicadas",
+    "text": "Las obras publicadas de la señorita incluyen un montón de revistas y fanzines."
+  },
+  "performance": {
+    "title": "Performance",
+    "text": "Los actos performáticos no tiene nada que ver con la experience de escritura."
+  },
+  "contact": {
+    "title": "Contacto",
+    "text": "Aquí las mil y una maneras de contactar a la susodicha."
   }
 }

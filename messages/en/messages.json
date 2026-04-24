@@ -5,13 +5,29 @@
     "ogTitle": "Rita Gonzalez Hesaynes",
     "ogDescription": "Argentine poet, programmer and translator based in Berlin."
   },
-  "homepage": {
-    "title": "Homepage"
-  },
   "menu": {
-    "intro": "Intro",
+    "bio": "Bio",
     "publishedWorks": "Published Works",
     "performance": "Performance",
     "contact": "Contact"
+  },
+  "homepage": {
+    "title": "Homepage"
+  },
+  "bio": {
+    "title": "Bio",
+    "text": "Este es el último texto que los ubérrimos profetas declararon para la santísima gloria del Señor."
+  },
+  "works": {
+    "title": "Published works",
+    "text": "The missus published works include a lot of magazines and fanzines."
+  },
+  "performance": {
+    "title": "Performance",
+    "text": "Performance acts don't have anything to do with the experience of writing."
+  },
+  "contact": {
+    "title": "Contacto",
+    "text": "Here are the thousand and one ways to contact the aforementioned girl."
   }
 }
