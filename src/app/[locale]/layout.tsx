@@ -1,20 +1,28 @@
+import { League_Spartan, Fredericka_the_Great, Oswald } from "next/font/google";
 import { Locale, routing } from "@/i18n/routing";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Geist, Geist_Mono } from "next/font/google";
 import { getSeoUrls } from "@/lib/seo";
 import Navbar from "@/components/ui/Navbar";
 import "../globals.css";
+import Footer from "@/components/ui/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const leagueSpartan = League_Spartan({
+  variable: '--font-league-spartan',
+  subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const frederickaTheGreat = Fredericka_the_Great({
+  variable: '--font-fredericka',
+  subsets: ['latin'],
+  weight: ['400'],
+  fallback: ['serif'],
+});
+
+const oswald = Oswald({
+  variable: '--font-oswald',
+  subsets: ['latin'],
 });
 
 export function generateStaticParams() {
@@ -66,12 +74,13 @@ export default async function LocaleLayout({ children, params }: {
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${leagueSpartan.variable} ${frederickaTheGreat.variable} ${oswald.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className='min-h-full flex flex-col'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

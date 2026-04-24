@@ -6,7 +6,12 @@
     "ogDescription": "Poeta, programadora y traductora argentina basada en Berlín."
   },
   "homepage": {
-    "title": "Página Principal",
-    "text": "Hola mundo"
+    "title": "Página Principal"
+  },
+   "menu": {
+    "intro": "Intro",
+    "publishedWorks": "Obras publicadas",
+    "performance": "Performance",
+    "contact": "Contacto"
   }
 }

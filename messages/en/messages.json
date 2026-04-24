@@ -6,7 +6,12 @@
     "ogDescription": "Argentine poet, programmer and translator based in Berlin."
   },
   "homepage": {
-    "title": "Homepage",
-    "text": "Hello world"
+    "title": "Homepage"
+  },
+  "menu": {
+    "intro": "Intro",
+    "publishedWorks": "Published Works",
+    "performance": "Performance",
+    "contact": "Contact"
   }
 }
