@@ -17,7 +17,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
   setRequestLocale(locale);
   return (
     <main className='flex flex-1 flex-col justify-center w-full max-w-2xl mx-auto px-6 py-12'> {/* remove max-w mx- y px- py- */}
-      <Menu locale={locale} />
+      <Menu />
     </main>
   );
 }

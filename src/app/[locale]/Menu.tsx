@@ -1,15 +1,30 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Link } from "@/i18n/navigation";
 
-export default async function Menu({ locale }: { locale: string }) {
-  setRequestLocale(locale);
-  const t = await getTranslations('menu');
+export default function Menu({ isNavbar, isDropdown, onLinkClick }: { isNavbar?: boolean; isDropdown?: boolean; onLinkClick?: () => void; }) {
+  const t = useTranslations('menu');
+
+  let divStyle = 'flex flex-col text-center font-catchy font-bold text-4xl md:text-5xl';
+  let linkStyle = 'py-3 link-hover-style';
+
+  if (isNavbar) {
+    divStyle = 'hidden md:flex font-compact gap-6 text-2xl';
+    linkStyle = 'link-hover-style';
+  }
+
+  if (isDropdown) {
+    divStyle = 'flex flex-col items-end z-99 font-compact text-2xl space-y-2';
+    linkStyle = 'pt-2 pb-3 px-4 shadow-md/30 rounded-xl bg-mystery text-lightneutral hover:underline hover:decoration-lightneutral hover:decoration-dotted hover:underline-offset-4 focus:bg-midneutral';
+  }
+
   return (
-    <div className='flex flex-col text-center font-catchy font-bold text-4xl md:text-5xl [&>a]:py-3 [&>a]:hover:underline [&>a]:hover:decoration-mystery [&>a]:hover:underline-offset-4 [&>a]:hover:cursor-pointer'>
-      <Link href='bio'>{t('bio')}</Link>
-      <Link href='works'>{t('publishedWorks')}</Link>
-      <Link href='performance'>{t('performance')}</Link>
-      <Link href='contact-details'>{t('contact')}</Link>
+    <div className={divStyle}>
+      <Link onClick={onLinkClick} href='bio' className={linkStyle}>{t('bio')}</Link>
+      <Link onClick={onLinkClick} href='works' className={linkStyle}>{t('works')}</Link>
+      <Link onClick={onLinkClick} href='performance' className={linkStyle}>{t('performance')}</Link>
+      <Link onClick={onLinkClick} href='contact-details' className={linkStyle}>{t('contact')}</Link>
     </div>
   );
 }

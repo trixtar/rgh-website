@@ -22,7 +22,7 @@ export function LanguageSwitcher() {
   return (
     <div className='flex gap-6'>
       {languages.map(lang => (
-        <button className='px-1 hover:cursor-pointer hover:underline hover:underline-offset-2' key={lang.code} onClick={() => handleLanguageChange(lang.code)}>
+        <button className='px-1 hover:cursor-pointer hover:underline hover:underline-offset-3 font-compact' key={lang.code} onClick={() => handleLanguageChange(lang.code)}>
           {lang.flag} {lang.name}
         </button>
       ))}
