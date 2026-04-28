@@ -13,11 +13,14 @@ const NavMenu = ({
   isDropdownShown?: boolean;
 }) => {
   const t = useTranslations('menu');
+  const hoverStyle = 'hover:cursor-pointer hover:border-mystery hover:border-dotted';
+  const activeStyle = 'basic-link-active-style';
+  const toggleStyle = isDropdownShown ? 'right-0 visible pointer-events-auto' : '-right-[160px] invisible pointer-events-none';
 
   return (
     <nav className='flex relative items-center' aria-label={t('label')}>
       <button
-        className='md:hidden border-transparent border-3 hover:cursor-pointer hover:border-mystery hover:border-dotted'
+        className={`md:hidden border-transparent border-3 ${hoverStyle} reset-focus ${activeStyle}`}
         onClick={onClick}
         aria-label={isDropdownShown ? t('close') : t('open')}
         aria-expanded={isDropdownShown ? true : false}
@@ -53,11 +56,9 @@ const NavMenu = ({
         )}
       </button>
       <Menu isInNavbar />
-      {isDropdownShown && (
-        <div className='absolute top-[46px] right-0'>
-          <Menu isDropdown onLinkClick={onClick} />
-        </div>
-      )}
+      <div className={`absolute top-[46px] transition-all duration-300 ease-in-out ${toggleStyle}`} aria-hidden={!isDropdownShown}>
+        <Menu isDropdown onLinkClick={onClick} />
+      </div>
     </nav>
   );
 };
@@ -72,7 +73,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const title = 'Rita Gonzalez Hesaynes';
   const isHomepage = pathname === '/';
-  const linkStyle = 'basic-link-hover-style basic-link-focus-style basic-link-active-style';
+  const linkStyle = 'basic-link-hover-style reset-focus basic-link-active-style';
 
   return (
     <header className='p-4 flex justify-between items-end'>

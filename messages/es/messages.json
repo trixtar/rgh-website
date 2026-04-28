@@ -14,6 +14,9 @@
     "open": "Abrir menú",
     "close": "Cerrar menú"
   },
+  "language-selector": {
+    "label": "Seleccionar idioma"
+  },
   "homepage": {
     "title": "Página Principal"
   },

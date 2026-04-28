@@ -5,8 +5,11 @@ import { usePathname } from '@/i18n/navigation';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { routing } from '@/i18n/routing';
 
-export function isInternationalizedRoute(pathname: string) {
-  return Object.keys(routing.pathnames).includes(pathname);
+export function isInternationalizedRoute(pathname: string): boolean {
+  if (pathname === '/') {
+    return true;
+  }
+  return Object.keys(routing.pathnames).includes(pathname.substring(1));
 }
 
 export default function Footer() {

@@ -29,7 +29,7 @@ export default function Menu({
 
   let containerStyle = 'flex flex-col items-center font-catchy font-bold mx-auto';
   let linkStyle = 'inline-flex items-center justify-center py-3 text-4xl md:text-5xl';
-  let focusStyle = 'basic-link-focus-style';
+  const focusStyle = 'reset-focus';
   let hoverStyle = 'basic-link-hover-style';
   let activeStyle = 'basic-link-active-style';
   let nonCurrentStyle: string;
@@ -47,7 +47,6 @@ export default function Menu({
     containerStyle = 'flex flex-col items-end z-99 font-compact space-y-2 md:hidden';
     linkStyle = 'block pt-2 pb-3 px-4 shadow-md/30 rounded-xl text-2xl text-lightneutral';
     hoverStyle = 'hover:underline hover:decoration-lightneutral hover:decoration-dotted hover:underline-offset-4';
-    focusStyle = 'focus:underline focus:decoration-lightneutral focus:decoration-dotted focus:underline-offset-4';
     activeStyle = 'basic-link-active-style active:text-darkneutral';
     nonCurrentStyle = 'bg-mystery';
     currentStyle = 'bg-midneutral';

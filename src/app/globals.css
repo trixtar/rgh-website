@@ -36,8 +36,8 @@
   .basic-link-hover-style {
     @apply hover:underline hover:decoration-mystery hover:decoration-dotted hover:underline-offset-4;
   }
-  .basic-link-focus-style {
-    @apply focus:underline focus:decoration-mystery focus:decoration-dotted focus:underline-offset-4;
+  .reset-focus {
+    @apply focus:outline-2 focus:outline-offset-2 focus:outline-mystery;
   }
   .basic-link-active-style {
     @apply active:bg-hope active:decoration-darkneutral;
