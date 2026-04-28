@@ -9,7 +9,10 @@
     "bio": "Bio",
     "works": "Obras",
     "performance": "Performance",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "label": "Menú principal",
+    "open": "Abrir menú",
+    "close": "Cerrar menú"
   },
   "homepage": {
     "title": "Página Principal"

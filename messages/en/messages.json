@@ -9,7 +9,10 @@
     "bio": "Bio",
     "works": "Works",
     "performance": "Performance",
-    "contact": "Contact"
+    "contact": "Contact",
+    "label": "Main menu",
+    "open": "Open menu",
+    "close": "Close menu"
   },
   "homepage": {
     "title": "Homepage"

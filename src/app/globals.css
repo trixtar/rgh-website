@@ -33,7 +33,10 @@
 }
 
 @layer utilities {
-  .link-hover-style {
+  .basic-link-hover-style {
     @apply hover:underline hover:decoration-mystery hover:decoration-dotted hover:underline-offset-4;
+  }
+  .basic-link-focus-style {
+    @apply focus:underline focus:decoration-mystery focus:decoration-dotted focus:underline-offset-4
   }
 }
