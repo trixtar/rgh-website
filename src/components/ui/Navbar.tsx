@@ -72,16 +72,15 @@ export default function Navbar() {
   const pathname = usePathname();
   const title = 'Rita Gonzalez Hesaynes';
   const isHomepage = pathname === '/';
+  const linkStyle = 'basic-link-hover-style basic-link-focus-style basic-link-active-style';
 
   return (
     <header className='p-4 flex justify-between items-end'>
-      <h1
-        className={`font-semibold text-3xl font-compact ${isHomepage ? '' : 'basic-link-hover-style'}`}
-      >
+      <h1 className='font-semibold text-3xl font-compact'>
         {isHomepage ? (
           <span>{title}</span>
         ) : (
-          <Link className='focus-hover-style' onClick={() => setDropdownShown(false)} href='/'>
+          <Link className={linkStyle} onClick={() => setDropdownShown(false)} href='/'>
             {title}
           </Link>
         )}

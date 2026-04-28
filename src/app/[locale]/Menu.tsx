@@ -27,44 +27,45 @@ export default function Menu({
 
   const isCurrent = (href: Href): boolean => pathname === `/${href}`;
 
-  let containerStyle =
-    'flex flex-col text-center font-catchy font-bold text-4xl md:text-5xl';
-  let linkStyle = 'py-3 basic-link-hover-style';
+  let containerStyle = 'flex flex-col items-center font-catchy font-bold mx-auto';
+  let linkStyle = 'inline-flex items-center justify-center py-3 text-4xl md:text-5xl';
+  let focusStyle = 'basic-link-focus-style';
+  let hoverStyle = 'basic-link-hover-style';
+  let activeStyle = 'basic-link-active-style';
   let nonCurrentStyle: string;
   let currentStyle: string;
-  let focusStyle = 'basic-link-focus-style';
-  let activeStyle = 'bg-hope';
 
   if (isInNavbar) {
-    containerStyle = 'hidden md:flex font-compact gap-6 text-2xl';
-    linkStyle = 'basic-link-hover-style';
-    currentStyle =
-      'underline decoration-midneutral decoration-dotted underline-offset-4';
+    containerStyle = 'hidden md:flex gap-6 font-compact';
+    linkStyle = 'text-2xl';
+    hoverStyle = 'basic-link-hover-style';
+    activeStyle = 'basic-link-active-style';
+    currentStyle = 'underline decoration-midneutral decoration-dotted underline-offset-4';
   }
 
   if (isDropdown) {
-    containerStyle =
-      'flex flex-col items-end z-99 font-compact text-2xl space-y-2 md:hidden';
-    linkStyle =
-      'pt-2 pb-3 px-4 shadow-md/30 rounded-xl text-lightneutral hover:underline hover:decoration-lightneutral hover:decoration-dotted hover:underline-offset-4 focus:bg-midneutral';
+    containerStyle = 'flex flex-col items-end z-99 font-compact space-y-2 md:hidden';
+    linkStyle = 'block pt-2 pb-3 px-4 shadow-md/30 rounded-xl text-2xl text-lightneutral';
+    hoverStyle = 'hover:underline hover:decoration-lightneutral hover:decoration-dotted hover:underline-offset-4';
+    focusStyle = 'focus:underline focus:decoration-lightneutral focus:decoration-dotted focus:underline-offset-4';
+    activeStyle = 'basic-link-active-style active:text-darkneutral';
     nonCurrentStyle = 'bg-mystery';
     currentStyle = 'bg-midneutral';
-    focusStyle = 'focus:underline focus:decoration-lightneutral focus:decoration-dotted focus:underline-offset-4';
   }
 
   const getLinkStyle = (href: Href): string => {
     if (isCurrent(href)) {
-      return `${linkStyle} ${currentStyle}`;
+      return `${linkStyle} ${hoverStyle} ${focusStyle} ${activeStyle} ${currentStyle}`;
     }
-    return `${linkStyle} ${nonCurrentStyle}`;
+    return `${linkStyle} ${hoverStyle} ${focusStyle} ${activeStyle} ${nonCurrentStyle}`;
   };
 
   return (
     <ul className={containerStyle}>
       {menuItems.map((item) => (
-        <li key={item.href} className={getLinkStyle(item.href)}>
+        <li key={item.href}>
           <Link
-            className={focusStyle}
+            className={getLinkStyle(item.href)}
             onClick={onLinkClick}
             href={item.href}
             aria-current={isCurrent(item.href) ? 'page' : undefined}
