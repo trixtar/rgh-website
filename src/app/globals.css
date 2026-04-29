@@ -10,7 +10,8 @@
   --color-darkneutral: var(--foreground);
   --color-midneutral: #595959;
   --color-mystery: #6E43B7;
-  --color-hope: #93D4EB;
+  --color-neon: #F7FF00;
+  --color-sky: #93D4EB;
   --font-sans: var(--font-league-spartan);
   --font-catchy: var(--font-fredericka);
   --font-compact: var(--font-oswald);
@@ -40,6 +41,6 @@
     @apply focus:outline-2 focus:outline-offset-2 focus:outline-mystery;
   }
   .basic-link-active-style {
-    @apply active:bg-hope active:decoration-darkneutral;
+    @apply active:bg-neon active:decoration-darkneutral;
   }
 }
