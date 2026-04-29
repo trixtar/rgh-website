@@ -1,5 +1,5 @@
-import { routing, Locale } from "@/i18n/routing";
-import { site } from "@/lib/site";
+import { routing, Locale } from '@/i18n/routing';
+import { site } from '@/lib/site';
 
 type HrefMap = Record<Locale, string>;
 
@@ -11,9 +11,9 @@ export function getSeoUrls(pathnameKey: keyof typeof routing.pathnames) {
   const urls: HrefMap = {} as HrefMap;
 
   for (const locale of locales) {
-    if (pathnameKey === "/") {
+    if (pathnameKey === '/') {
       urls[locale] = `${site.baseUrl}/${locale}`;
-    } else if (typeof value !== "string") {
+    } else if (typeof value !== 'string') {
       urls[locale] = `${site.baseUrl}/${locale}${value[locale]}`;
     }
   }

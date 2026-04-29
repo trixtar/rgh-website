@@ -1,12 +1,12 @@
-import { League_Spartan, Fredericka_the_Great, Oswald } from "next/font/google";
-import { Locale, routing } from "@/i18n/routing";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { getSeoUrls } from "@/lib/seo";
-import Navbar from "@/components/ui/Navbar";
-import "../globals.css";
-import Footer from "@/components/ui/Footer";
+import { League_Spartan, Fredericka_the_Great, Oswald } from 'next/font/google';
+import { Locale, routing } from '@/i18n/routing';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { getSeoUrls } from '@/lib/seo';
+import Navbar from '@/components/ui/Navbar';
+import '../globals.css';
+import Footer from '@/components/ui/Footer';
 
 const leagueSpartan = League_Spartan({
   variable: '--font-league-spartan',
@@ -32,7 +32,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { locale: Locale } }) {
   const { locale } = await params;
 
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const t = await getTranslations({ locale, namespace: 'metadata' });
   const urls = getSeoUrls('/');
 
   return {

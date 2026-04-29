@@ -37,10 +37,10 @@
   .basic-link-hover-style {
     @apply hover:underline hover:decoration-mystery hover:decoration-dotted hover:underline-offset-4;
   }
-  .reset-focus {
-    @apply focus:outline-2 focus:outline-offset-2 focus:outline-mystery;
-  }
   .basic-link-active-style {
     @apply active:bg-neon active:decoration-darkneutral;
+  }
+  .reset-focus {
+    @apply focus:outline-2 focus:outline-offset-2 focus:outline-mystery;
   }
 }

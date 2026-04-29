@@ -1,5 +1,5 @@
-import Menu from "@/app/[locale]/Menu";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import Menu from '@/app/[locale]/Menu';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;

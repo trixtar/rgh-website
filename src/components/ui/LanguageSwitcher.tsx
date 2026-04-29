@@ -1,8 +1,8 @@
 'use client';
 
-import { useRouter, usePathname } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
+import { useRouter, usePathname } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇬🇧' },

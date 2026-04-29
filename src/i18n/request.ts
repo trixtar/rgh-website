@@ -1,6 +1,6 @@
-import { hasLocale } from "next-intl";
-import { getRequestConfig, GetRequestConfigParams } from "next-intl/server";
-import { routing } from "./routing";
+import { hasLocale } from 'next-intl';
+import { getRequestConfig, GetRequestConfigParams } from 'next-intl/server';
+import { routing } from './routing';
 
 // https://www.buildwithmatija.com/blog/nextjs-internationalization-guide-next-intl-2025
 

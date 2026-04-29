@@ -1,5 +1,5 @@
-import { routing } from "@/i18n/routing";
-import { getSeoUrls } from "@/lib/seo";
+import { routing } from '@/i18n/routing';
+import { getSeoUrls } from '@/lib/seo';
 
 export default function sitemap() {
   const result = [];
