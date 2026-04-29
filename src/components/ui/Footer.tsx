@@ -17,8 +17,10 @@ export default function Footer() {
   const showLanguageSwitcher = isInternationalizedRoute(pathname);
 
   return (
-    <nav className='p-4 flex justify-center items-center bg-darkneutral text-lightneutral'>
-      {showLanguageSwitcher && <LanguageSwitcher />}
-    </nav>
+    <footer>
+      <nav className='p-4 flex justify-center items-center bg-darkneutral text-lightneutral'>
+        {showLanguageSwitcher && <LanguageSwitcher />}
+      </nav>
+    </footer>
   );
 }
