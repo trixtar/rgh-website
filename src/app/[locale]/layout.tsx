@@ -76,7 +76,7 @@ export default async function LocaleLayout({ children, params }: {
       lang={locale}
       className={`${leagueSpartan.variable} ${frederickaTheGreat.variable} ${oswald.variable} h-full antialiased overflow-x-hidden`}
     >
-      <body className='min-h-full flex flex-col overflow-x-hidden'>
+      <body className='min-h-screen flex flex-col overflow-x-hidden'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}

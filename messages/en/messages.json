@@ -22,7 +22,10 @@
   },
   "bio": {
     "title": "Bio",
-    "text": "Este es el último texto que los ubérrimos profetas declararon para la santísima gloria del Señor."
+    "altText1": "Picture of the author reading in the street",
+    "altText2": "Picture of the author in a space age ensemble, taken by Dirk Skiba",
+    "paragraph1": "Rita Gonzalez Hesaynes is a poet and performer from Azul, Argentina. Having left their International Relations studies unfinished, they went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation work and a wide variety of odd jobs. Since 2019 they're living in Berlin, Germany, where they're professionally engaged in software development.",
+    "paragraph2": "Rita's work frequently explores philosophical and existential issues emphasizing the common aspects of human experience despite epochal, geographical and cultural differences. Concepts from science, myth and history intertwine in pieces that stray from the merely anecdotal and lean towards the dramatic monologue and social satire."
   },
   "works": {
     "title": "Published works",
