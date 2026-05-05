@@ -64,4 +64,7 @@
   .reset-focus-block {
     @apply focus:outline-3 focus:outline-mystery;
   }
+  .paragraph-text {
+    @apply text-lg;
+  }
 }
