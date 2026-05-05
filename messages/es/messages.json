@@ -5,6 +5,9 @@
     "ogTitle": "Rita Gonzalez Hesaynes",
     "ogDescription": "Poeta, programadora y traductora argentina basada en Berlín."
   },
+  "accessibility": {
+    "newTab": "(abre en una pestaña nueva)"
+  },
   "menu": {
     "bio": "Bio",
     "works": "Obras",
@@ -22,11 +25,17 @@
   },
   "bio": {
     "title": "Bio",
-    "text": "Este es el último texto que los ubérrimos profetas declararon para la santísima gloria del Señor."
+    "altText1": "Foto de la autora leyendo en la calle",
+    "altText2": "Foto de la autora en un vestido al estilo de la era espacial, sacada por Dirk Skiba",
+    "paragraph1": "Rita Gonzalez Hesaynes es una poeta y performer de Azul, Argentina. Luego de interrumpir sus estudios en Relaciones Internacionales, obtuvo la Licenciatura en Letras en la Universidad de Buenos Aires y trabajó en docencia, escritura, traducción y una amplia variedad de ocupaciones. Desde el año 2019 reside en Berlín, Alemania, donde se dedica profesionalmente al desarrollo de software.",
+    "paragraph2": "Su obra explora con frecuencia problemas filosóficos y existenciales que enfatizan los aspectos comunes de la experiencia humans a pesar de diferencias epocales, geográficas y culturales. Diversos conceptos científicos y figuras del mito y la Historia se entrelazan en poemas que se desvían de lo meramente anecdótico y se inclinan hacia el monólogo dramático y la sátira social."
   },
   "works": {
     "title": "Obras publicadas",
-    "text": "Las obras publicadas de la señorita incluyen un montón de revistas y fanzines."
+    "paragraph1": "Rita ha publicado los siguientes libros de poesía:\n\n- *¡Oh mitocondria!* (2015, añosluz editora)\n- *En la gran existencia* (2017, añosluz editora)\n- *neuro:mantra* (2018, ediciones Abend)\n- *Elfo corporativo* (2021, Promesa Editorial)",
+    "paragraph2": "como asimismo las plaquettes:\n\n- *La Belle Époque* (2017, Difusión A/terna)\n- *Una intensa hierba* (in \"La caja negra\", 2017, No es como una rubia en el avión)\n- *Brabbeln, Babillage, Balbucear* (2023, Siesta Verlag, en coautoría)",
+    "altText1": "Tapa de",
+    "altText2": "en"
   },
   "performance": {
     "title": "Performance",

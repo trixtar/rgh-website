@@ -33,6 +33,18 @@
   }
 }
 
+@layer components {
+  .dash-list-child {
+    @apply [&_ul>li]:list-none [&_ul>li]:before:content-['-'] [&_ul>li]:before:mr-2;
+  }
+  .book-container {
+    @apply p-4 h-full flex flex-col items-center justify-center;
+  }
+  .book-caption {
+    @apply pt-1 font-compact text-lg;
+  }
+}
+
 @layer utilities {
   .basic-link-hover-style {
     @apply hover:underline hover:decoration-mystery hover:decoration-dotted hover:underline-offset-4;
@@ -42,5 +54,14 @@
   }
   .reset-focus {
     @apply focus:outline-2 focus:outline-offset-2 focus:outline-mystery;
+  }
+  .block-link-hover-style {
+    @apply hover:outline-dotted hover:outline-mystery hover:outline-3;
+  }
+  .block-link-active-style {
+    @apply active:bg-neon active:outline-darkneutral;
+  }
+  .reset-focus-block {
+    @apply focus:outline-3 focus:outline-mystery;
   }
 }

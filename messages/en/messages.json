@@ -5,6 +5,9 @@
     "ogTitle": "Rita Gonzalez Hesaynes",
     "ogDescription": "Argentine poet, programmer and translator based in Berlin."
   },
+  "accessibility": {
+    "newTab": "(opens in a new tab)"
+  },
   "menu": {
     "bio": "Bio",
     "works": "Works",
@@ -23,13 +26,16 @@
   "bio": {
     "title": "Bio",
     "altText1": "Picture of the author reading in the street",
-    "altText2": "Picture of the author in a space age ensemble, taken by Dirk Skiba",
-    "paragraph1": "Rita Gonzalez Hesaynes is a poet and performer from Azul, Argentina. Having left their International Relations studies unfinished, they went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation work and a wide variety of odd jobs. Since 2019 they're living in Berlin, Germany, where they're professionally engaged in software development.",
-    "paragraph2": "Rita's work frequently explores philosophical and existential issues emphasizing the common aspects of human experience despite epochal, geographical and cultural differences. Concepts from science, myth and history intertwine in pieces that stray from the merely anecdotal and lean towards the dramatic monologue and social satire."
+    "altText2": "Picture of the author in a space age style dress, taken by Dirk Skiba",
+    "paragraph1": "Rita Gonzalez Hesaynes is a poet and performer from Azul, Argentina. Having left her International Relations studies unfinished, she went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation work and a wide variety of odd jobs. Since 2019 she's living in Berlin, Germany, where they're professionally engaged in software development.",
+    "paragraph2": "Her work frequently explores philosophical and existential issues emphasizing the common aspects of human experience despite epochal, geographical and cultural differences. Concepts from science, myth and history intertwine in pieces that stray from the merely anecdotal and lean towards the dramatic monologue and social satire."
   },
   "works": {
     "title": "Published works",
-    "text": "The missus published works include a lot of magazines and fanzines."
+    "paragraph1": "Rita has published the following poetry books:\n\n- *¡Oh mitocondria!* (2015, añosluz editora)\n- *En la gran existencia* (2017, añosluz editora)\n- *neuro:mantra* (2018, ediciones Abend)\n- *Elfo corporativo* (2021, Promesa Editorial)",
+    "paragraph2": "as well as the chapbooks / *plaquettes*:\n\n- *La Belle Époque* (2017, Difusión A/terna)\n- *Una intensa hierba* (in \"La caja negra\", 2017, No es como una rubia en el avión)\n- *Brabbeln, Babillage, Balbucear* (2023, Siesta Verlag, co-authored)",
+    "altText1": "Book cover for",
+    "altText2": "in"
   },
   "performance": {
     "title": "Performance",
