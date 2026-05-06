@@ -6,7 +6,7 @@
     "ogDescription": "Poeta, programadora y traductora argentina basada en Berlín."
   },
   "accessibility": {
-    "newTab": "(abre en una pestaña nueva)"
+    "newTab": "(se abre en una pestaña nueva en segundo plano)"
   },
   "menu": {
     "bio": "Bio",
@@ -42,8 +42,9 @@
     "altText2": "en"
   },
   "performance": {
-    "title": "Performance",
-    "text": "Los actos performáticos no tiene nada que ver con la experience de escritura."
+    "title": "Archivo de performance",
+    "paragraph1": "Una breve selección de videoclips y grabaciones de lectura y performance a modo de archivo personal:",
+    "watchOn": "Ver en"
   },
   "contact": {
     "title": "Contacto",
