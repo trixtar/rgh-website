@@ -7,7 +7,9 @@
   },
   "global": {
     "newTab": "(opens in a new tab in the background)",
-    "close": "Close"
+    "close": "Close",
+    "closePhotoGallery": "Close photo viewer",
+    "openPhoto": "Open photo:"
   },
   "menu": {
     "bio": "Bio",

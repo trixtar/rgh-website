@@ -156,7 +156,7 @@ export default async function Performance({ params }: { params: { locale: string
           ))}
         </div>
       </section>
-      <section className='pt-10'>
+      <section className='pt-9'>
         <h2 className='subtitle'>{t('subtitlePhotos')}</h2>
         <PhotoGallery photos={photos} />
       </section>

@@ -7,7 +7,9 @@
   },
   "global": {
     "newTab": "(se abre en una pestaña nueva en segundo plano)",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "closePhotoGallery": "Cerrar visor de fotos",
+    "openPhoto": "Abrir foto:"
   },
   "menu": {
     "bio": "Bio",
