@@ -67,4 +67,7 @@
   .paragraph-text {
     @apply text-lg;
   }
+  .subtitle {
+    @apply font-catchy font-bold text-3xl text-center;
+  }
 }

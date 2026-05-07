@@ -43,8 +43,12 @@
   },
   "performance": {
     "title": "Archivo de performance",
+    "subtitleVideos": "Archivo de Video",
+    "subtitlePhotos": "Galería de Fotos",
     "paragraph1": "Una breve selección de videoclips y grabaciones de lectura y performance a modo de archivo personal:",
-    "watchOn": "Ver en"
+    "watchOn": "Ver en",
+    "on": "en",
+    "by": "producido por"
   },
   "contact": {
     "title": "Contacto",

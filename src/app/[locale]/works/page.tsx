@@ -1,5 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown';
 import Image from 'next/image';
 
 import ohmitocondria from '@/assets/images/oh mitocondria.jpg';
@@ -39,10 +39,10 @@ export default async function Works({ params }: { params: { locale: string } }) 
   return (
     <main className='flex-1 w-full max-w-4xl mx-auto px-6 py-12'> {/* remove max-w mx- y px- py- */}
       <div className='text-lg dash-list-child [&>p]:pb-2'>
-        <ReactMarkdown>{t('paragraph1')}</ReactMarkdown>
+        <Markdown>{t('paragraph1')}</Markdown>
       </div>
       <div className='pt-3 text-lg dash-list-child [&>p]:pb-2'>
-        <ReactMarkdown>{t('paragraph2')}</ReactMarkdown>
+        <Markdown>{t('paragraph2')}</Markdown>
       </div>
       <div className="pt-3 grid grid-cols-2 md:grid-cols-3 gap-2">
        <Link className='block block-link-hover-style block-link-active-style reset-focus-block' href='https://promesaeditorial.com.ar/productos/elfo-corporativo-rita-gonzalez-hesaynes/' target='_blank' rel='noopener noreferrer'>

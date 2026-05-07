@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown';
 import photo1 from '@/assets/images/elfo2.jpg';
 import photo2 from '@/assets/images/skiba3.jpg';
 
@@ -30,9 +30,9 @@ export default async function Bio({ params }: { params: { locale: string } }) {
       </div>
       <div className='mt-6 flex flex-col items-start gap-6 sm:flex-row'>
         <div className='paragraph-text space-y-4'>
-          <ReactMarkdown>{t('paragraph3')}</ReactMarkdown>
+          <Markdown>{t('paragraph3')}</Markdown>
           <p>{t('paragraph4')}</p>
-          <ReactMarkdown>{t('paragraph5')}</ReactMarkdown>
+          <Markdown>{t('paragraph5')}</Markdown>
           <p>{t('paragraph6')}</p>
         </div>
         <Image src={photo2} width={412} quality={100} className='mx-auto' alt={t('altText2')} />

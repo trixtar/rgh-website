@@ -43,8 +43,12 @@
   },
   "performance": {
     "title": "Performance archive",
+    "subtitleVideos": "Video Archive",
+    "subtitlePhotos": "Photo Gallery",
     "paragraph1": "A brief selection of videoclips and reading and performance recordings, kept as personal archive:",
-    "watchOn": "Watch on"
+    "watchOn": "Watch on",
+    "on": "on",
+    "by": "produced by"
   },
   "contact": {
     "title": "Contact",
