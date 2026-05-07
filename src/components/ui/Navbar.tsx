@@ -13,7 +13,7 @@ const NavMenu = ({
   isDropdownShown?: boolean;
 }) => {
   const t = useTranslations('menu');
-  const hoverStyle = 'hover:cursor-pointer hover:border-mystery hover:border-dotted';
+  const hoverStyle = 'cursor-pointer hover:border-mystery hover:border-dotted';
   const activeStyle = 'basic-link-active-style';
   const toggleStyle = isDropdownShown ? 'right-0 visible pointer-events-auto' : '-right-[160px] invisible pointer-events-none';
 

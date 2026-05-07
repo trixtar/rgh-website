@@ -23,7 +23,7 @@ export function LanguageSwitcher() {
   const getIsCurrent = (locale: string): boolean => locale === currentLocale;
   const getUnderlineStyle = (locale: string): string => getIsCurrent(locale) ? 'underline underline-offset-3' : '';
 
-  const hoverStyle = 'hover:cursor-pointer hover:underline hover:underline-offset-3';
+  const hoverStyle = 'cursor-pointer hover:underline hover:underline-offset-3';
   const focusStyle = 'focus:outline-2 focus:outline-offset-2 focus:outline-lightneutral';
   const activeStyle = 'basic-link-active-style active:text-darkneutral';
 

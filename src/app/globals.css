@@ -47,7 +47,7 @@
 
 @layer utilities {
   .basic-link-hover-style {
-    @apply hover:underline hover:decoration-mystery hover:decoration-dotted hover:underline-offset-4;
+    @apply cursor-pointer hover:underline hover:decoration-mystery hover:decoration-dotted hover:underline-offset-4;
   }
   .basic-link-active-style {
     @apply active:bg-neon active:decoration-darkneutral;
@@ -56,7 +56,7 @@
     @apply focus:outline-2 focus:outline-offset-2 focus:outline-mystery;
   }
   .block-link-hover-style {
-    @apply hover:outline-dotted hover:outline-mystery hover:outline-3;
+    @apply cursor-pointer hover:outline-dotted hover:outline-mystery hover:outline-3;
   }
   .block-link-active-style {
     @apply active:bg-neon active:outline-darkneutral;
@@ -68,6 +68,6 @@
     @apply text-lg;
   }
   .subtitle {
-    @apply font-catchy font-bold text-3xl text-center;
+    @apply pb-5 font-catchy font-bold text-3xl text-center;
   }
 }

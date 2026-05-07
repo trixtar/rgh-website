@@ -5,8 +5,9 @@
     "ogTitle": "Rita Gonzalez Hesaynes",
     "ogDescription": "Poeta, programadora y traductora argentina basada en Berlín."
   },
-  "accessibility": {
-    "newTab": "(se abre en una pestaña nueva en segundo plano)"
+  "global": {
+    "newTab": "(se abre en una pestaña nueva en segundo plano)",
+    "close": "Cerrar"
   },
   "menu": {
     "bio": "Bio",
