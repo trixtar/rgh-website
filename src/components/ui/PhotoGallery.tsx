@@ -57,15 +57,31 @@ export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
 
     window.addEventListener('keydown', handleKeyDown);
     closeButtonRef.current?.focus();
-    document.body.style.overflow = 'hidden';
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
       if (previousFocusRef.current && document.contains(previousFocusRef.current)) {
         previousFocusRef.current.focus();
       }
     }
+  }, [selectedPhoto]);
+
+  useEffect(() => {
+    if (!selectedPhoto) return;
+
+    const scrollY = window.scrollY;
+
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+
+    return () => {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+
+      window.scrollTo(0, scrollY);
+    };
   }, [selectedPhoto]);
 
   const thumbnailHoverStyle = 'cursor-pointer block-link-hover-style hover:outline-offset-3';
