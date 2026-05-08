@@ -1,88 +1,25 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { ArchivedPhoto } from '@/lib/types';
 import { useTranslations } from 'next-intl';
 import Markdown from 'react-markdown';
+import { useAccessibleModal } from '../../hooks/useAccessibleModal';
 
 export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
-  const [selectedPhoto, setSelectedPhoto] = useState<ArchivedPhoto>();
-  const closeModal = () => setSelectedPhoto(undefined);
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const previousFocusRef = useRef<HTMLElement | null>(null);
   const t = useTranslations('global');
+  const [selectedPhoto, setSelectedPhoto] = useState<ArchivedPhoto>();
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const closeModal = () => setSelectedPhoto(undefined);
 
-  const trapFocus = (e: KeyboardEvent) => {
-    const modal = document.querySelector(`[role='dialog']`) as HTMLElement;
-    if (!modal) return;
-
-    const focusableElements = Array.from(
-      modal.querySelectorAll<HTMLElement>(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      )
-    ).filter(el => el.offsetParent !== null);
-    if (!focusableElements.length) return;
-
-    const first = focusableElements[0];
-    const last = focusableElements[focusableElements.length - 1];
-    const active = document.activeElement as HTMLElement;
-    if (!modal.contains(active)) return;
-
-    if (e.shiftKey && active === first) {
-      e.preventDefault();
-      last.focus();
-    }
-
-    if (!e.shiftKey && active === last) {
-      e.preventDefault();
-      first.focus();
-    }
-  };
-
-  useEffect(() => {
-    if (!selectedPhoto) return;
-
-    previousFocusRef.current = document.activeElement as HTMLElement;
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        closeModal();
-      }
-
-      if (e.key === 'Tab') {
-        trapFocus(e);
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown);
-    closeButtonRef.current?.focus();
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      if (previousFocusRef.current && document.contains(previousFocusRef.current)) {
-        previousFocusRef.current.focus();
-      }
-    }
-  }, [selectedPhoto]);
-
-  useEffect(() => {
-    if (!selectedPhoto) return;
-
-    const scrollY = window.scrollY;
-
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
-
-    return () => {
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-
-      window.scrollTo(0, scrollY);
-    };
-  }, [selectedPhoto]);
+  useAccessibleModal({
+    isOpen: Boolean(selectedPhoto),
+    dialogRef,
+    initialFocusRef: closeButtonRef,
+    onClose: closeModal,
+  });
 
   const thumbnailHoverStyle = 'cursor-pointer block-link-hover-style hover:outline-offset-3';
   const thumbnailFocusStyle = 'reset-focus-block focus:outline-offset-3';
@@ -103,7 +40,7 @@ export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
 
       {selectedPhoto && (
         <div className='fixed inset-0 z-50 bg-darkneutral/85 flex items-center justify-center p-4' onClick={closeModal}>
-          <div className='flex flex-col items-center gap-3' onClick={e => e.stopPropagation()} role='dialog' aria-modal={true} aria-label={selectedPhoto.alt}>
+          <div ref={dialogRef} className='flex flex-col items-center gap-3' onClick={e => e.stopPropagation()} role='dialog' aria-modal={true} aria-label={selectedPhoto.alt}>
             <Image
               src={selectedPhoto.src}
               alt={selectedPhoto.alt}
