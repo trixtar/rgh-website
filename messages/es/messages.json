@@ -8,6 +8,9 @@
   "global": {
     "newTab": "(se abre en una pestaña nueva en segundo plano)",
     "close": "Cerrar",
+    "watchOn": "Ver en",
+    "playVideo": "Reproducir video",
+    "openVideo": "Abrir video",
     "closePhotoGallery": "Cerrar visor de fotos",
     "openPhoto": "Abrir foto:"
   },
@@ -49,7 +52,6 @@
     "subtitleVideos": "Archivo de Video",
     "subtitlePhotos": "Galería de Fotos",
     "paragraph1": "Una breve selección de videoclips y grabaciones de lectura y performance a modo de archivo personal:",
-    "watchOn": "Ver en",
     "on": "en",
     "by": "producido por"
   },

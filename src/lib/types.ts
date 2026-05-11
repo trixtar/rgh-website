@@ -9,8 +9,8 @@ export interface ArchivedVideo {
   key: string;
   title: string;
   src: string;
-  youTube?: boolean;
   platform: Platforms;
+  thumbnail: StaticImageData;
   aspect?: string;
   watchUrl?: string;
 }

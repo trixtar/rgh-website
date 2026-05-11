@@ -1,8 +1,8 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
-export default async function NewTab() {
-  const t = await getTranslations('global');
+export default function NewTab() {
+  const t = useTranslations('global');
   return (
     <>
       <ArrowTopRightOnSquareIcon aria-hidden='true' className='ml-1 mb-1 inline size-4' />

@@ -8,6 +8,9 @@
   "global": {
     "newTab": "(opens in a new tab in the background)",
     "close": "Close",
+    "watchOn": "Watch on",
+    "playVideo": "Play video",
+    "openVideo": "Open video",
     "closePhotoGallery": "Close photo viewer",
     "openPhoto": "Open photo:"
   },
@@ -49,7 +52,6 @@
     "subtitleVideos": "Video Archive",
     "subtitlePhotos": "Photo Gallery",
     "paragraph1": "A brief selection of videoclips and reading and performance recordings, kept as personal archive:",
-    "watchOn": "Watch on",
     "on": "on",
     "by": "produced by"
   },
