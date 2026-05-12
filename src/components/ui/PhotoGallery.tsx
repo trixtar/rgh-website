@@ -30,13 +30,15 @@ export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
 
   return (
     <>
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+      <ul className='grid grid-cols-2 md:grid-cols-4 gap-4'>
         {photos.map(photo => (
-          <button key={photo.key} aria-label={`${t('openPhoto')} ${photo.title}`} onClick={() => setSelectedPhoto(photo)} className={`relative h-64 overflow-hidden rounded-xl ${thumbnailHoverStyle} ${thumbnailFocusStyle} group`}>
-            <Image src={photo.src} alt={photo.alt} title={photo.title} fill className='object-cover group-active:invert' sizes='(max-width: 768px) 50vw, 25vw' />
-          </button>
+          <li key={photo.key}>
+            <button aria-label={`${t('openPhoto')} ${photo.title}`} onClick={() => setSelectedPhoto(photo)} className={`relative w-full h-64 overflow-hidden rounded-xl ${thumbnailHoverStyle} ${thumbnailFocusStyle} group`}>
+              <Image src={photo.src} alt={photo.alt} title={photo.title} fill className='object-cover group-active:invert' sizes='(max-width: 768px) 50vw, 25vw' />
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
 
       {selectedPhoto && (
         <div className='fixed inset-0 z-50 bg-darkneutral/85 flex items-center justify-center p-4' onClick={closeModal}>
