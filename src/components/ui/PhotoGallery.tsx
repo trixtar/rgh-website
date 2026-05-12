@@ -33,7 +33,7 @@ export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
       <ul className='grid grid-cols-2 md:grid-cols-4 gap-4'>
         {photos.map(photo => (
           <li key={photo.key}>
-            <button aria-label={`${t('openPhoto')} ${photo.title}`} onClick={() => setSelectedPhoto(photo)} className={`relative w-full h-64 overflow-hidden rounded-xl ${thumbnailHoverStyle} ${thumbnailFocusStyle} group`}>
+            <button aria-label={`${t('openPhoto')}: ${photo.title}`} onClick={() => setSelectedPhoto(photo)} className={`relative w-full h-64 overflow-hidden rounded-xl ${thumbnailHoverStyle} ${thumbnailFocusStyle} group`}>
               <Image src={photo.src} alt={photo.alt} title={photo.title} fill className='object-cover group-active:invert' sizes='(max-width: 768px) 50vw, 25vw' />
             </button>
           </li>
@@ -52,7 +52,7 @@ export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
             <div className='text-lightneutral text-lg'>
               <Markdown>{selectedPhoto.title}</Markdown>
             </div>
-            <button ref={closeButtonRef} onClick={closeModal} aria-label={t('closePhotoGallery')} className={`p-1 absolute top-4 right-4 text-lightneutral text-2xl ${closeHoverStyle} ${closeFocusStyle} ${closeActiveStyle}`}>
+            <button ref={closeButtonRef} onClick={closeModal} aria-label={t('closeViewer')} className={`p-1 absolute top-4 right-4 text-lightneutral text-2xl ${closeHoverStyle} ${closeFocusStyle} ${closeActiveStyle}`}>
               <span>{t('close')}</span>
             </button>
           </div>

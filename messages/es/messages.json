@@ -11,8 +11,9 @@
     "watchOn": "Ver en",
     "playVideo": "Reproducir video",
     "openVideo": "Abrir video",
-    "closePhotoGallery": "Cerrar visor de fotos",
-    "openPhoto": "Abrir foto:"
+    "videoPlayer": "Reproductor de video",
+    "closeViewer": "Cerrar modal de visualización",
+    "openPhoto": "Abrir foto"
   },
   "menu": {
     "bio": "Bio",
