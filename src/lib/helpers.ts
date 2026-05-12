@@ -1,0 +1,1 @@
+export const sanitizeMarkdownItalics = (title: string): string => title.replace(/\*/g, '');
