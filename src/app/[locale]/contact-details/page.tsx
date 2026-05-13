@@ -57,7 +57,7 @@ export default async function ContactDetails({ params }: { params: { locale: str
           )}}>
             {t('paragraph1')}
           </Markdown>
-          <CopyToClipboardButton text='ritagonzalezhesaynes@gmail.com' />
+          <CopyToClipboardButton label={t('verboseEmail')} textToCopy='ritagonzalezhesaynes@gmail.com' isExplicit={true} />
         </div>
         <Markdown>{`${t('paragraph2')}:`}</Markdown>
         <ul className='space-y-2'>

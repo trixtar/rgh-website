@@ -10,7 +10,7 @@
     "playVideo": "Reproducir video",
     "openVideo": "Abrir video",
     "openPhoto": "Abrir foto",
-    "copyToClipboard": "(copiar al portapapeles).",
+    "clickToCopy": "(click para copiar).",
     "copied": "(copiado).",
     "copyError": "Error al copiar:"
   },
@@ -55,8 +55,9 @@
   },
   "contact": {
     "title": "Contacto",
-    "paragraph1": "Escribime un mail a [ritagonzalezhesaynes arroba gmail punto com](mailto:ritagonzalezhesaynes@gmail.com)",
-    "paragraph2": "Alternativamente, contactame por redes sociales"
+    "paragraph1": "Escribime un mail a",
+    "paragraph2": "Alternativamente, contactame por redes sociales",
+    "verboseEmail": "ritagonzalezhesaynes arroba gmail punto com"
   },
   "photoLabels": {
     "bairesElfoTitle": "Presentación de *Elfo Corporativo* en Buenos Aires",

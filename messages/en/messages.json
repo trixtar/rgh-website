@@ -10,8 +10,8 @@
     "playVideo": "Play video",
     "openVideo": "Open video",
     "openPhoto": "Open photo",
-    "copyToClipboard": "Copy to clipboard",
-    "copied": "Copied!",
+    "clickToCopy": "(click to copy).",
+    "copied": "(copied).",
     "copyError": "Failed to copy:"
   },
   "menu": {
@@ -55,8 +55,9 @@
   },
   "contact": {
     "title": "Contact",
-    "paragraph1": "Write me an e-mail to [ritagonzalezhesaynes at gmail dot com](mailto:ritagonzalezhesaynes@gmail.com)",
-    "paragraph2": "Alternatively, contact me on social media"
+    "paragraph1": "Write me an e-mail to",
+    "paragraph2": "Alternatively, contact me on social media",
+    "verboseEmail": "ritagonzalezhesaynes at gmail dot com"
   },
   "photoLabels": {
     "bairesElfoTitle": "Presentation of *Elfo Corporativo* in Buenos Aires",
