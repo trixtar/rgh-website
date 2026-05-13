@@ -57,5 +57,25 @@
   "contact": {
     "title": "Contact",
     "text": "Here are the thousand and one ways to contact the aforementioned girl."
+  },
+  "photoLabels": {
+    "bairesElfoTitle": "Presentation of *Elfo Corporativo* in Buenos Aires",
+    "bairesElfoAlt": "Person in a white shirt reading into a microphone while holding an open book under stage lighting.",
+    "samsaraTitle": "Performance of the poem 'Samsara'",
+    "samsaraAlt": "Author kneeling while reciting poetry at the center of a circle of seated and standing audience members.",
+    "divinaTitle": "*De mis venas surgen cables*, videoclip by Divina Encarnación",
+    "divinaAlt": "Person wearing a steampunk mask, a hat, and a neo-Victorian outfit, operating a machine in a workshop.",
+    "berlinElfoTitle": "Presentation of *Elfo Corporativo* in Berlín",
+    "berlinElfoAlt": "Person with orange hair, a business suit and elf ears, reading from an open book.",
+    "habitacionTitle": "Stage performance of *Una habitación así*",
+    "habitacionAlt": "Person with silver hair sitting while looking at a bouquet of lilac flowers held in their hands.",
+    "siestaTitle": "Performance for the first Siesta Festival in Berlín",
+    "siestaAlt": "Person with orange in a business suit reading texts beside a blue mannequin wearing headphones and holding a laptop.",
+    "terrazaTitle": "Reading performance for *Poesía en la Terraza*",
+    "terrazaAlt": "Close-up of a person with indigo hair reciting into a microphone.",
+    "bynTitle": "Reading performance Buenos Aires",
+    "bynAlt": "Black-and-white photograph of a person reading from a printed sheet into a microphone, backlit.",
+    "encuentroTitle": "Reading performance for *El Encuentro*",
+    "encuentroAlt": "Author with blue hair reading poetry into a microphone while holding printed pages under dim stage lighting."
   }
 }

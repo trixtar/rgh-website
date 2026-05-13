@@ -57,5 +57,25 @@
   "contact": {
     "title": "Contacto",
     "text": "Aquí las mil y una maneras de contactar a la susodicha."
+  },
+  "photoLabels": {
+    "bairesElfoTitle": "Presentación de *Elfo Corporativo* en Buenos Aires",
+    "bairesElfoAlt": "Persona de camisa blanca leyendo con micrófono y sosteniendo un libro abierto bajo una iluminación escénica",
+    "samsaraTitle": "Interpretación del poema 'Samsara'",
+    "samsaraAlt": "Persona arrodillada recitando poesía en el centro de una ronda de personas sentadas y paradas.",
+    "divinaTitle": "Videoclip *De mis venas surgen cables*, de Divina Encarnación",
+    "divinaAlt": "Persona con máscara steampunk, sombrero y atuendo neovictoriano, operando una máquina en un taller",
+    "berlinElfoTitle": "Presentación de *Elfo Corporativo* en Berlín",
+    "berlinElfoAlt": "Persona de cabello naranja, traje de negocios y orejas de elfo, leyendo de un libro abierto.",
+    "habitacionTitle": "Función de *Una habitación así*",
+    "habitacionAlt": "Persona de cabello plateado sentada, mirando un ramo de flores lilas que sostiene con las manos",
+    "siestaTitle": "Performance para el primer Siesta Festival de Berlín",
+    "siestaAlt": "Persona de cabello anaranjado y traje de negocios leyendo textos junto a un maniquí azul con auriculares y una computadora portátil.",
+    "terrazaTitle": "Lectura para *Poesía en la Terraza*",
+    "terrazaAlt": "Primer plano de persona de cabello índigo recitando con micrófono",
+    "bynTitle": "Lectura en Buenos Aires",
+    "bynAlt": "Foto en blanco y negro de una persona leyendo con micrófono de una hoja impresa, iluminada a contraluz",
+    "encuentroTitle": "Performance de lectura para *El Encuentro*",
+    "encuentroAlt": "Persona de cabello azul leyendo poesía frente a un micrófono, sosteniendo hojas impresas bajo una iluminación escénica tenue."
   }
 }

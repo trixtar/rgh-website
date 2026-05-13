@@ -1,12 +1,14 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import VideoGallery from '@/components/ui/VideoGallery';
+import PhotoGallery from '@/components/ui/PhotoGallery';
+import { ArchivedPhoto, ArchivedVideo, Platforms } from '@/lib/types';
+
 import thumb1 from '@/assets/thumbnails/videos/1postits.jpg';
 import thumb2 from '@/assets/thumbnails/videos/2violenciadomestica.jpg';
 import thumb3 from '@/assets/thumbnails/videos/3elfin.jpg';
 import thumb4 from '@/assets/thumbnails/videos/4nacimientos.jpg';
 import thumb5 from '@/assets/thumbnails/videos/5sisifa.jpg';
 
-import PhotoGallery from '@/components/ui/PhotoGallery';
 import photo1 from '@/assets/images/elfo1.jpg';
 import photo2 from '@/assets/images/perfo1.jpg';
 import photo3 from '@/assets/images/divina encarnacion.png';
@@ -16,64 +18,6 @@ import photo6 from '@/assets/images/siesta1.jpg';
 import photo7 from '@/assets/images/lectura1.jpg';
 import photo8 from '@/assets/images/lectura2.jpg';
 import photo9 from '@/assets/images/el encuentro.jpg';
-import { ArchivedPhoto, ArchivedVideo, Platforms } from '@/lib/types';
-
-const photos: ArchivedPhoto[] = [
-  {
-    key: 'ph1',
-    title: `Presentación de *Elfo Corporativo* en Buenos Aires`,
-    alt: 'La autora leyendo',
-    src: photo1,
-  },
-  {
-    key: 'ph2',
-    title: `Interpretación de "Samsara"`,
-    alt: 'La autora arrodillada recitando su poema Samsara',
-    src: photo2,
-  },
-  {
-    key: 'ph3',
-    title: 'Videoclip de Divina Encarnación',
-    alt: 'La autora con una máscara steampunk',
-    src: photo3,
-  },
-  {
-    key: 'ph4',
-    title: `Presentación de *Elfo Corporativo* en Berlín`,
-    alt: 'La autora leyendo al aire libre',
-    src: photo4,
-  },
-  {
-    key: 'ph5',
-    title: 'Función de *Una habitación así*',
-    alt: 'La autora sentada',
-    src: photo5,
-  },
-  {
-    key: 'ph6',
-    title: 'Performance en Siesta Festival de Berlín',
-    alt: 'La autora con cables',
-    src: photo6,
-  },
-  {
-    key: 'ph7',
-    title: 'Lectura en *Poesía en la Terraza*',
-    alt: 'Primer plano de la autora leyendo',
-    src: photo7,
-  },
-  {
-    key: 'ph8',
-    title: 'Lectura en Buenos Aires',
-    alt: 'Foto en blanco y negro',
-    src: photo8,
-  },
-  {
-    key: 'ph9',
-    title: 'Performance en *El Encuentro*',
-    alt: 'La autora sorprendida',
-    src: photo9,
-  }
-];
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
@@ -89,6 +33,7 @@ export default async function Performance({ params }: { params: { locale: string
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('performance');
+  const tLabel = await getTranslations('photoLabels');
   const on = t('on');
   const by = t('by');
 
@@ -128,6 +73,63 @@ export default async function Performance({ params }: { params: { locale: string
       platform: Platforms.INSTAGRAM,
       watchUrl: 'https://www.instagram.com/reel/DUlnBCogjJB/?igsh=NDY2eTBvbTBsdWc1',
       thumbnail: thumb5,
+    }
+  ];
+
+  const photos: ArchivedPhoto[] = [
+    {
+      key: 'ph1',
+      title: tLabel('bairesElfoTitle'),
+      alt: tLabel('bairesElfoAlt'),
+      src: photo1,
+    },
+    {
+      key: 'ph2',
+      title: tLabel('samsaraTitle'),
+      alt: tLabel('samsaraAlt'),
+      src: photo2,
+    },
+    {
+      key: 'ph3',
+      title: tLabel('divinaTitle'),
+      alt: tLabel('divinaAlt'),
+      src: photo3,
+    },
+    {
+      key: 'ph4',
+      title: tLabel('berlinElfoTitle'),
+      alt: tLabel('berlinElfoAlt'),
+      src: photo4,
+    },
+    {
+      key: 'ph5',
+      title: tLabel('habitacionTitle'),
+      alt: tLabel('habitacionAlt'),
+      src: photo5,
+    },
+    {
+      key: 'ph6',
+      title: tLabel('siestaTitle'),
+      alt: tLabel('siestaAlt'),
+      src: photo6,
+    },
+    {
+      key: 'ph7',
+      title: tLabel('terrazaTitle'),
+      alt: tLabel('terrazaAlt'),
+      src: photo7,
+    },
+    {
+      key: 'ph8',
+      title: tLabel('bynTitle'),
+      alt: tLabel('bynAlt'),
+      src: photo8,
+    },
+    {
+      key: 'ph9',
+      title: tLabel('encuentroTitle'),
+      alt: tLabel('encuentroAlt'),
+      src: photo9,
     }
   ];
 
