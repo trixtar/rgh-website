@@ -4,15 +4,15 @@
     "description": "Argentine poet, programmer and translator based in Berlin."
   },
   "global": {
-    "newTab": "(opens in a new tab in the background)",
+    "newTab": "(opens in a new tab)",
     "close": "Close",
     "watchOn": "Watch on",
     "playVideo": "Play video",
     "openVideo": "Open video",
     "openPhoto": "Open photo",
-    "clickToCopy": "(click to copy).",
-    "copied": "(copied).",
-    "copyError": "Failed to copy:"
+    "clickToCopy": "click to copy",
+    "copied": "copied",
+    "copyError": "Failed to copy"
   },
   "menu": {
     "bio": "Bio",
@@ -55,9 +55,9 @@
   },
   "contact": {
     "title": "Contact",
-    "paragraph1": "Write me an e-mail to",
-    "paragraph2": "Alternatively, contact me on social media",
-    "verboseEmail": "ritagonzalezhesaynes at gmail dot com"
+    "paragraph1": "Email me at",
+    "paragraph2": "You can also find me on social media",
+    "verboseEmail": "ritagonzalezhesaynes [at] gmail.com"
   },
   "photoLabels": {
     "bairesElfoTitle": "Presentation of *Elfo Corporativo* in Buenos Aires",

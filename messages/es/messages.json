@@ -4,15 +4,15 @@
     "description": "Poeta, programadora y traductora argentina basada en Berlín."
   },
   "global": {
-    "newTab": "(se abre en una pestaña nueva en segundo plano)",
+    "newTab": "(se abre en una pestaña nueva)",
     "close": "Cerrar",
     "watchOn": "Ver en",
     "playVideo": "Reproducir video",
     "openVideo": "Abrir video",
     "openPhoto": "Abrir foto",
-    "clickToCopy": "(click para copiar).",
-    "copied": "(copiado).",
-    "copyError": "Error al copiar:"
+    "clickToCopy": "click para copiar",
+    "copied": "copiado",
+    "copyError": "Error al copiar"
   },
   "menu": {
     "bio": "Bio",
@@ -56,8 +56,8 @@
   "contact": {
     "title": "Contacto",
     "paragraph1": "Escribime un mail a",
-    "paragraph2": "Alternativamente, contactame por redes sociales",
-    "verboseEmail": "ritagonzalezhesaynes arroba gmail punto com"
+    "paragraph2": "También podés encontrarme en redes sociales",
+    "verboseEmail": "ritagonzalezhesaynes [arroba] gmail.com"
   },
   "photoLabels": {
     "bairesElfoTitle": "Presentación de *Elfo Corporativo* en Buenos Aires",

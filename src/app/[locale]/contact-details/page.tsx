@@ -3,6 +3,7 @@ import Markdown from 'react-markdown';
 import Link from 'next/link';
 import { siSubstack, siInstagram, siWordpress, siFacebook, SimpleIcon } from 'simple-icons/icons';
 import CopyToClipboardButton from '@/components/ui/CopyToClipboard';
+import NewTab from '@/components/ui/NewTab';
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
@@ -45,6 +46,7 @@ const socials: SocialsInfo[] = [
 
 export default async function ContactDetails({ params }: { params: { locale: string } }) {
   const { locale } = await params;
+  const emailParts = ['rita', 'gonzalez', 'hesaynes', '@', 'gmail', '.', 'com'];
 
   setRequestLocale(locale);
   const t = await getTranslations('contact');
@@ -57,17 +59,18 @@ export default async function ContactDetails({ params }: { params: { locale: str
           )}}>
             {t('paragraph1')}
           </Markdown>
-          <CopyToClipboardButton label={t('verboseEmail')} textToCopy='ritagonzalezhesaynes@gmail.com' isExplicit={true} />
+          <CopyToClipboardButton label={t('verboseEmail')} textToCopy={emailParts.join('')} isExplicit={true} />
         </div>
         <Markdown>{`${t('paragraph2')}:`}</Markdown>
         <ul className='space-y-2'>
           {socials.map(social => (
             <li key={social.label}>
-              <Link href={social.url} className='inline-flex items-center text-lg basic-link-hover-style basic-link-active-style reset-focus'>
+              <Link href={social.url} className='inline-flex items-center text-lg basic-link-hover-style basic-link-active-style reset-focus' target='_blank' rel='noopener noreferrer'>
                 <svg role='img' viewBox='0 0 24 24' className='w-5 h-5' fill={`#${social.icon.hex}`}>
                   <path d={social.icon.path} />
                 </svg> 
                 <span className='pl-2 pt-1'>{social.label}</span>
+                <NewTab />
               </Link>
             </li>
           ))}
