@@ -15,12 +15,14 @@ export function isInternationalizedRoute(pathname: string): boolean {
 export default function Footer() {
   const pathname = usePathname();
   const showLanguageSwitcher = isInternationalizedRoute(pathname);
+  const currentYear = new Date().getFullYear()
 
   return (
-    <footer>
-      <nav className='p-4 flex justify-center items-center bg-darkneutral text-lightneutral'>
+    <footer className='p-4 flex flex-col justify-center items-center bg-darkneutral text-lightneutral sm:flex-row-reverse sm:justify-between'>
+      <nav>
         {showLanguageSwitcher && <LanguageSwitcher />}
       </nav>
+      <p className='pt-5 sm:p-0'>{`© ${currentYear} - Rita Gonzalez Hesaynes`}</p>
     </footer>
   );
 }

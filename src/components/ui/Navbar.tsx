@@ -18,7 +18,7 @@ const NavMenu = ({
   const toggleStyle = isDropdownShown ? 'right-0 visible pointer-events-auto' : '-right-[160px] invisible pointer-events-none';
 
   return (
-    <nav className='flex relative items-center' aria-label={t('label')}>
+    <nav className='flex relative items-center z-25' aria-label={t('label')}>
       <button
         className={`md:hidden border-transparent border-3 ${hoverStyle} reset-focus ${activeStyle}`}
         onClick={onClick}
@@ -73,21 +73,20 @@ export default function Navbar() {
   const pathname = usePathname();
   const title = 'Rita Gonzalez Hesaynes';
   const isHomepage = pathname === '/';
+  const nameStyle = 'font-semibold text-3xl font-compact';
   const linkStyle = 'basic-link-hover-style reset-focus basic-link-active-style';
 
   return (
     <header className='p-4 flex justify-between items-end'>
-      <h1 className='font-semibold text-3xl font-compact'>
-        {isHomepage ? (
-          <span>{title}</span>
-        ) : (
-          <Link className={linkStyle} onClick={() => setDropdownShown(false)} href='/'>
+      {isHomepage ? (
+        <div className={nameStyle}>{title}</div>
+      ) : (
+        <>
+          <Link className={`${nameStyle} ${linkStyle}`} onClick={() => setDropdownShown(false)} href='/'>
             {title}
           </Link>
-        )}
-      </h1>
-      {!isHomepage && (
-        <NavMenu onClick={handleClick} isDropdownShown={isDropdownShown} />
+          <NavMenu onClick={handleClick} isDropdownShown={isDropdownShown} />
+        </>
       )}
     </header>
   );

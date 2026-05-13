@@ -37,7 +37,7 @@ export default async function Works({ params }: { params: { locale: string } }) 
   const titleBalbucear = 'Brabbeln, Babillage, Balbucear';
 
   return (
-    <main className='flex-1 w-full max-w-4xl mx-auto px-6 py-12'> {/* remove max-w mx- y px- py- */}
+    <main className='main-container'>
       <div className='text-lg dash-list-child [&>p]:pb-2'>
         <Markdown>{t('paragraph1')}</Markdown>
       </div>

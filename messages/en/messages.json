@@ -1,9 +1,7 @@
 {
   "metadata": {
     "title": "Rita Gonzalez Hesaynes",
-    "description": "Argentine poet, programmer and translator based in Berlin.",
-    "ogTitle": "Rita Gonzalez Hesaynes",
-    "ogDescription": "Argentine poet, programmer and translator based in Berlin."
+    "description": "Argentine poet, programmer and translator based in Berlin."
   },
   "global": {
     "newTab": "(opens in a new tab in the background)",
@@ -30,11 +28,9 @@
   },
   "bio": {
     "title": "Bio",
-    "altText1": "Picture of the author reading in the street",
-    "altText2": "Picture of the author in a space age style dress, taken by Dirk Skiba",
-    "paragraph1": "Rita Gonzalez Hesaynes is a poet and performer from Azul, Argentina. Having left her International Relations studies unfinished, she went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation work and a wide variety of odd jobs. Since 2019 she's living in Berlin, Germany, where they're professionally engaged in software development.",
-    "paragraph2": "Her work frequently explores philosophical and existential issues emphasizing the common aspects of human experience despite epochal, geographical and cultural differences. Concepts from science, myth and history intertwine in pieces that stray from the merely anecdotal and lean towards the dramatic monologue and social satire.",
-    "paragraph3": "Her published collections include *¡oh mitocondria!* (2015), *en la gran existencia* (2017), *neuro:mantra* (2018) and *Elfo Corporativo* (2021), alongside several chapbooks. Her writing has been translated into Portuguese, English and German, and has been featured in anthologies, school textbooks and various print and online magazines.",
+    "paragraph1": "Rita Gonzalez Hesaynes is an author and performer from Azul, Argentina. Having left her International Relations studies unfinished, she went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation and a wide variety of odd jobs. Since 2019 she has been living in Berlin, Germany, where she is professionally engaged in software development.",
+    "paragraph2": "Her work focuses on poetry and often explores philosophical and existential issues emphasizing the common aspects of human experience despite epochal, geographical and cultural differences. Concepts from science, myth and history intertwine in pieces that avoid the merely anecdotal and lean towards the dramatic monologue and social satire.",
+    "paragraph3": "She has published the collections *¡oh mitocondria!* (2015), *en la gran existencia* (2017), *neuro:mantra* (2018) and *Elfo Corporativo* (2021), alongside several chapbooks. Her writing has been translated into Portuguese, English and German, and has been featured in anthologies, school textbooks and various print and online magazines.",
     "paragraph4": "Rita performs regularly at spoken word events and competitions in both Spanish and English.",
     "paragraph5": "Her stage experience includes a supporting role in *Una habitación así* (2017) and *El Encuentro* (2016), an interdisciplinary performance blending poetry and chamber music, as well as several appearances in music videos.",
     "paragraph6": "She is also involved in literary translation, driven purely by love of the craft, and has translated several poems and essays into Spanish, paying special attention to tone and nuances of meaning."

@@ -20,22 +20,22 @@ export default async function Bio({ params }: { params: { locale: string } }) {
   setRequestLocale(locale);
   const t = await getTranslations('bio');
   return (
-    <main className='flex-1 w-full max-w-4xl mx-auto px-6 py-12'> {/* remove max-w mx- y px- py- */}
+    <main className='main-container'>
       <div className='flex flex-col items-end gap-6 sm:flex-row-reverse'>
         <div className='paragraph-text space-y-4'>
-          <p>{t('paragraph1')}</p>
-          <p>{t('paragraph2')}</p>
+          <Markdown>{t('paragraph1')}</Markdown>
+          <Markdown>{t('paragraph2')}</Markdown>
         </div>
-        <Image src={photo1} width={412} quality={100} className='mx-auto' alt={t('altText1')} />
+        <Image src={photo1} width={412} quality={100} className='mx-auto' alt='' aria-hidden='true' />
       </div>
       <div className='mt-6 flex flex-col items-start gap-6 sm:flex-row'>
         <div className='paragraph-text space-y-4'>
           <Markdown>{t('paragraph3')}</Markdown>
-          <p>{t('paragraph4')}</p>
+          <Markdown>{t('paragraph4')}</Markdown>
           <Markdown>{t('paragraph5')}</Markdown>
-          <p>{t('paragraph6')}</p>
+          <Markdown>{t('paragraph6')}</Markdown>
         </div>
-        <Image src={photo2} width={412} quality={100} className='mx-auto' alt={t('altText2')} />
+        <Image src={photo2} width={412} quality={100} className='mx-auto' alt='' aria-hidden='true' />
       </div>
     </main>
   );

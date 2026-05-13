@@ -45,15 +45,15 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     },
 
     openGraph: {
-      title: t('ogTitle'),
-      description: t('ogDescription'),
+      title: t('title'),
+      description: t('description'),
       locale,
     },
 
     twitter: {
       card: 'summary_large_image',
-      title: t('ogTitle'),
-      description: t('ogDescription'),
+      title: t('title'),
+      description: t('description'),
     }
   };
 }

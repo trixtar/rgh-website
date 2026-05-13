@@ -32,10 +32,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 export default async function Performance({ params }: { params: { locale: string } }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('performance');
-  const tLabel = await getTranslations('photoLabels');
-  const on = t('on');
-  const by = t('by');
+  const t = await getTranslations();
+  const on = t('performance.on');
+  const by = t('performance.by');
 
   const videos: ArchivedVideo[] = [
     {
@@ -79,69 +78,69 @@ export default async function Performance({ params }: { params: { locale: string
   const photos: ArchivedPhoto[] = [
     {
       key: 'ph1',
-      title: tLabel('bairesElfoTitle'),
-      alt: tLabel('bairesElfoAlt'),
+      title: t('photoLabels.bairesElfoTitle'),
+      alt: t('photoLabels.bairesElfoAlt'),
       src: photo1,
     },
     {
       key: 'ph2',
-      title: tLabel('samsaraTitle'),
-      alt: tLabel('samsaraAlt'),
+      title: t('photoLabels.samsaraTitle'),
+      alt: t('photoLabels.samsaraAlt'),
       src: photo2,
     },
     {
       key: 'ph3',
-      title: tLabel('divinaTitle'),
-      alt: tLabel('divinaAlt'),
+      title: t('photoLabels.divinaTitle'),
+      alt: t('photoLabels.divinaAlt'),
       src: photo3,
     },
     {
       key: 'ph4',
-      title: tLabel('berlinElfoTitle'),
-      alt: tLabel('berlinElfoAlt'),
+      title: t('photoLabels.berlinElfoTitle'),
+      alt: t('photoLabels.berlinElfoAlt'),
       src: photo4,
     },
     {
       key: 'ph5',
-      title: tLabel('habitacionTitle'),
-      alt: tLabel('habitacionAlt'),
+      title: t('photoLabels.habitacionTitle'),
+      alt: t('photoLabels.habitacionAlt'),
       src: photo5,
     },
     {
       key: 'ph6',
-      title: tLabel('siestaTitle'),
-      alt: tLabel('siestaAlt'),
+      title: t('photoLabels.siestaTitle'),
+      alt: t('photoLabels.siestaAlt'),
       src: photo6,
     },
     {
       key: 'ph7',
-      title: tLabel('terrazaTitle'),
-      alt: tLabel('terrazaAlt'),
+      title: t('photoLabels.terrazaTitle'),
+      alt: t('photoLabels.terrazaAlt'),
       src: photo7,
     },
     {
       key: 'ph8',
-      title: tLabel('bynTitle'),
-      alt: tLabel('bynAlt'),
+      title: t('photoLabels.bynTitle'),
+      alt: t('photoLabels.bynAlt'),
       src: photo8,
     },
     {
       key: 'ph9',
-      title: tLabel('encuentroTitle'),
-      alt: tLabel('encuentroAlt'),
+      title: t('photoLabels.encuentroTitle'),
+      alt: t('photoLabels.encuentroAlt'),
       src: photo9,
     }
   ];
 
   return (
-    <main className='flex-1 w-full max-w-4xl mx-auto px-6 py-12'> {/* remove max-w mx- y px- py- */}
+    <main className='main-container'>
       <section>
-        <h2 className='subtitle'>{t('subtitleVideos')}</h2>
-        <p className='pb-3 paragraph-text'>{t('paragraph1')}</p>
+        <h2 className='subtitle'>{t('performance.subtitleVideos')}</h2>
+        <p className='pb-3 paragraph-text'>{t('performance.paragraph1')}</p>
         <VideoGallery videos={videos} />
       </section>
       <section className='pt-9'>
-        <h2 className='subtitle'>{t('subtitlePhotos')}</h2>
+        <h2 className='subtitle'>{t('performance.subtitlePhotos')}</h2>
         <PhotoGallery photos={photos} />
       </section>
     </main>

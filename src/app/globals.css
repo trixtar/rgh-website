@@ -34,6 +34,10 @@
 }
 
 @layer components {
+  .main-container {
+    /* remove max-w mx- y px- py-  */
+    @apply flex-1 w-full max-w-4xl mx-auto px-6 py-12;
+  }
   .dash-list-child {
     @apply [&_ul>li]:list-none [&_ul>li]:before:content-['-'] [&_ul>li]:before:mr-2;
   }
