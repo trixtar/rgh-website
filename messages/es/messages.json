@@ -9,7 +9,10 @@
     "watchOn": "Ver en",
     "playVideo": "Reproducir video",
     "openVideo": "Abrir video",
-    "openPhoto": "Abrir foto"
+    "openPhoto": "Abrir foto",
+    "copyToClipboard": "(copiar al portapapeles).",
+    "copied": "(copiado).",
+    "copyError": "Error al copiar:"
   },
   "menu": {
     "bio": "Bio",
@@ -37,7 +40,7 @@
   },
   "works": {
     "title": "Obras publicadas",
-    "paragraph1": "Rita ha publicado los siguientes libros de poesía:\n\n- *¡Oh mitocondria!* (2015, añosluz editora)\n- *En la gran existencia* (2017, añosluz editora)\n- *neuro:mantra* (2018, ediciones Abend)\n- *Elfo corporativo* (2021, Promesa Editorial)",
+    "paragraph1": "Publiqué estos libros de poesía:\n\n- *¡Oh mitocondria!* (2015, añosluz editora)\n- *En la gran existencia* (2017, añosluz editora)\n- *neuro:mantra* (2018, ediciones Abend)\n- *Elfo corporativo* (2021, Promesa Editorial)",
     "paragraph2": "como asimismo las plaquettes:\n\n- *La Belle Époque* (2017, Difusión A/terna)\n- *Una intensa hierba* (in \"La caja negra\", 2017, No es como una rubia en el avión)\n- *Brabbeln, Babillage, Balbucear* (2023, Siesta Verlag, en coautoría)",
     "altText1": "Tapa de",
     "altText2": "en"
@@ -52,7 +55,8 @@
   },
   "contact": {
     "title": "Contacto",
-    "text": "Aquí las mil y una maneras de contactar a la susodicha."
+    "paragraph1": "Escribime un mail a [ritagonzalezhesaynes arroba gmail punto com](mailto:ritagonzalezhesaynes@gmail.com)",
+    "paragraph2": "Alternativamente, contactame por redes sociales"
   },
   "photoLabels": {
     "bairesElfoTitle": "Presentación de *Elfo Corporativo* en Buenos Aires",
