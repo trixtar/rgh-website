@@ -3,10 +3,10 @@
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
-interface CopyToClipboardButtonProps {
-  label: string;
+interface CopyToClipboardProps {
   textToCopy: string;
-  isExplicit?: boolean;
+  textToShow?: string;
+  ariaDescribedById: string;
 }
 
 enum Status {
@@ -15,7 +15,7 @@ enum Status {
   ERROR = 'error',
 }
 
-export default function CopyToClipboardButton ({ label, textToCopy, isExplicit }: CopyToClipboardButtonProps ) {
+export default function CopyToClipboard ({ textToShow, textToCopy, ariaDescribedById }: CopyToClipboardProps ) {
   const t = useTranslations('global');
   const [status, setStatus] = useState<Status>(Status.INITIAL);
 
@@ -43,12 +43,11 @@ export default function CopyToClipboardButton ({ label, textToCopy, isExplicit }
   }
 
   return (
-    <>
-      <button onClick={copyToClipboard} aria-label={`${label} ${t('clickToCopy')}`} className='basic-link-hover-style basic-link-active-style reset-focus text-mystery'>
-        {label}
+    <span>
+      <button onClick={copyToClipboard} aria-label={t('copyToClipboard')} aria-describedby={ariaDescribedById} className='basic-link-hover-style basic-link-active-style reset-focus text-mystery'>
+        <span aria-hidden='true'>{textToShow || t('copyToClipboard')}</span>
       </button>
       <span className='sr-only' aria-live='polite'>{getStatusText()}</span>
-      {isExplicit && <span aria-hidden='true'>{`(${t('clickToCopy')}).`}</span>}
-    </>
+    </span>
   );
 };

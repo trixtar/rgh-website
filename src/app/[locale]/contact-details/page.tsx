@@ -2,8 +2,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Markdown from 'react-markdown';
 import Link from 'next/link';
 import { siSubstack, siInstagram, siWordpress, siFacebook, SimpleIcon } from 'simple-icons/icons';
-import CopyToClipboardButton from '@/components/ui/CopyToClipboard';
 import NewTab from '@/components/ui/NewTab';
+import EmailReveal from '@/components/ui/EmailReveal';
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const { locale } = await params;
@@ -46,20 +46,19 @@ const socials: SocialsInfo[] = [
 
 export default async function ContactDetails({ params }: { params: { locale: string } }) {
   const { locale } = await params;
-  const emailParts = ['rita', 'gonzalez', 'hesaynes', '@', 'gmail', '.', 'com'];
 
   setRequestLocale(locale);
   const t = await getTranslations('contact');
   return (
     <main className='main-container'>
       <div className='paragraph-text space-y-2'>
-        <div className='inline-flex space-x-1'>
-          <Markdown components={{ a: ({ href, children }) => (
+        <div className='flex flex-wrap gap-x-1'>
+          <Markdown components={{a: ({ href, children }) => (
             <a href={href} className='basic-link-hover-style basic-link-active-style reset-focus text-mystery'>{children}</a>
           )}}>
             {t('paragraph1')}
           </Markdown>
-          <CopyToClipboardButton label={t('verboseEmail')} textToCopy={emailParts.join('')} isExplicit={true} />
+          <EmailReveal />
         </div>
         <Markdown>{`${t('paragraph2')}:`}</Markdown>
         <ul className='space-y-2'>

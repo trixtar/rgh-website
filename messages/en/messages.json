@@ -10,7 +10,8 @@
     "playVideo": "Play video",
     "openVideo": "Open video",
     "openPhoto": "Open photo",
-    "clickToCopy": "click to copy",
+    "copyToClipboard": "copy to clipboard",
+    "revealEmail": "reveal e-mail",
     "copied": "copied",
     "copyError": "Failed to copy"
   },
