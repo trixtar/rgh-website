@@ -3,7 +3,7 @@
 import Menu from '@/app/[locale]/Menu';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const NavMenu = ({
   onClick,
@@ -15,15 +15,23 @@ const NavMenu = ({
   const t = useTranslations('menu');
   const hoverStyle = 'cursor-pointer hover:border-mystery hover:border-dotted';
   const activeStyle = 'basic-link-active-style';
-  const toggleStyle = isDropdownShown ? 'right-0 visible pointer-events-auto' : '-right-[160px] invisible pointer-events-none';
+  const toggleStyle = isDropdownShown ? 'right-0 visible' : '-right-[160px] invisible';
+  const hamburgerButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!isDropdownShown) {
+      hamburgerButtonRef.current?.focus();
+    }
+  }, [isDropdownShown]);
 
   return (
     <nav className='flex relative items-center z-25' aria-label={t('label')}>
       <button
+        ref={hamburgerButtonRef}
         className={`md:hidden border-transparent border-3 ${hoverStyle} reset-focus ${activeStyle}`}
         onClick={onClick}
         aria-label={isDropdownShown ? t('close') : t('open')}
-        aria-expanded={isDropdownShown ? true : false}
+        aria-expanded={isDropdownShown}
       >
         {isDropdownShown ? (
           <svg
@@ -56,7 +64,7 @@ const NavMenu = ({
         )}
       </button>
       <Menu isInNavbar />
-      <div className={`absolute top-[46px] transition-all duration-300 ease-in-out ${toggleStyle}`} aria-hidden={!isDropdownShown}>
+      <div className={`absolute top-[46px] transition-all duration-300 ease-in-out ${toggleStyle}`} inert={!isDropdownShown}>
         <Menu isDropdown onLinkClick={onClick} />
       </div>
     </nav>

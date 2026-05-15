@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Rita Gonzalez Hesaynes",
-    "description": "Poeta, programadora y traductora argentina basada en Berlín."
+    "description": "Escritora, desarrolladora de software y traductora argentina basada en Berlín."
   },
   "global": {
     "newTab": "(se abre en una pestaña nueva)",
@@ -32,7 +32,7 @@
   },
   "bio": {
     "title": "Bio",
-    "paragraph1": "Rita Gonzalez Hesaynes es una autora y performer nacida en Azul, Argentina. Tras dejar inconclusos sus estudios en Relaciones Internacionales, obtuvo la Licenciatura en Letras en la Universidad de Buenos Aires y trabajó en docencia, escritura, traducción y una amplia variedad de ocupaciones. Desde el año 2019 reside en Berlín, Alemania, donde se dedica profesionalmente al desarrollo de software.",
+    "paragraph1": "Rita Gonzalez Hesaynes es una escritora y performer nacida en Azul, Argentina. Tras dejar inconclusos sus estudios en Relaciones Internacionales, obtuvo la Licenciatura en Letras en la Universidad de Buenos Aires y trabajó en docencia, escritura, traducción y una amplia variedad de ocupaciones. Desde el año 2019 reside en Berlín, Alemania, donde se dedica profesionalmente al desarrollo de software.",
     "paragraph2": "Su trabajo se centra en la poesía y a menudo explora cuestiones filosóficas y existenciales que enfatizan los aspectos comunes de la experiencia humana a pesar de diferencias de época, geográficas y culturales. Diversos conceptos científicos y figuras del mito y la historia se entrelazan en poemas que esquivan lo meramente anecdótico y derivan hacia el monólogo dramático y la sátira social.",
     "paragraph3": "Ha publicado los poemarios *¡oh mitocondria!* (2015), *en la gran existencia* (2017), *neuro:mantra* (2018) y *Elfo Corporativo* (2021), además de varias plaquettes. Sus textos han sido traducidos al portugués, inglés y alemán, y han aparecido en antologías, manuales escolares y diversas revistas impresas y digitales.",
     "paragraph4": "Se presenta con regularidad en eventos de lectura de poesía y competencias de *spoken word*.",
@@ -79,5 +79,9 @@
     "bynAlt": "Foto en blanco y negro de una persona leyendo con micrófono de una hoja impresa, iluminada a contraluz",
     "encuentroTitle": "Performance de lectura para *El Encuentro*",
     "encuentroAlt": "Persona de cabello azul leyendo poesía frente a un micrófono, sosteniendo hojas impresas bajo una iluminación escénica tenue."
+  },
+  "errors": {
+    "404label": "Error 404",
+    "404message": "Esta página no existe."
   }
 }

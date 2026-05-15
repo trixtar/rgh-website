@@ -12,21 +12,20 @@ import balbucear from '@/assets/images/brabbeln babillage balbucear.webp';
 import Link from 'next/link';
 import NewTab from '@/components/ui/NewTab';
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
-  const { locale } = await params;
-
-  const t = await getTranslations({ locale, namespace: 'works' });
+export async function generateMetadata() {
+  const t = await getTranslations('works');
 
   return {
     title: `Rita Gonzalez Hesaynes | ${t('title')}`,
   };
 }
 
-export default async function Works({ params }: { params: { locale: string } }) {
+export default async function Works({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-
   setRequestLocale(locale);
+
   const t = await getTranslations('works');
+
   const titleMitocondria = '¡oh mitocondria!';
   const titleExistencia = 'en la gran existencia';
   const titleNeuromantra = 'neuro:mantra';

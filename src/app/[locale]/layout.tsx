@@ -1,29 +1,10 @@
-import { League_Spartan, Fredericka_the_Great, Oswald } from 'next/font/google';
 import { Locale, routing } from '@/i18n/routing';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { getSeoUrls } from '@/lib/seo';
 import Navbar from '@/components/ui/Navbar';
-import '../globals.css';
 import Footer from '@/components/ui/Footer';
-
-const leagueSpartan = League_Spartan({
-  variable: '--font-league-spartan',
-  subsets: ['latin'],
-});
-
-const frederickaTheGreat = Fredericka_the_Great({
-  variable: '--font-fredericka',
-  subsets: ['latin'],
-  weight: ['400'],
-  fallback: ['serif'],
-});
-
-const oswald = Oswald({
-  variable: '--font-oswald',
-  subsets: ['latin'],
-});
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
@@ -32,7 +13,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { locale: Locale } }) {
   const { locale } = await params;
 
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const t = await getTranslations('metadata');
   const urls = getSeoUrls('/');
 
   return {
@@ -60,7 +41,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
 
 export default async function LocaleLayout({ children, params }: {
   children: React.ReactNode,
-  params: { locale: string },
+  params: Promise<{ locale: string }>,
 }) {
   const { locale } = await params;
 
@@ -72,17 +53,10 @@ export default async function LocaleLayout({ children, params }: {
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${leagueSpartan.variable} ${frederickaTheGreat.variable} ${oswald.variable} h-full antialiased overflow-x-hidden`}
-    >
-      <body className='min-h-screen flex flex-col overflow-x-hidden'>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Navbar />
+      {children}
+      <Footer />
+    </NextIntlClientProvider>
   );
 }

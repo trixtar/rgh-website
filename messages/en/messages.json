@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Rita Gonzalez Hesaynes",
-    "description": "Argentine poet, programmer and translator based in Berlin."
+    "description": "Argentine writer, software developer and translator based in Berlin."
   },
   "global": {
     "newTab": "(opens in a new tab)",
@@ -32,7 +32,7 @@
   },
   "bio": {
     "title": "Bio",
-    "paragraph1": "Rita Gonzalez Hesaynes is an author and performer from Azul, Argentina. Having left her International Relations studies unfinished, she went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation and a wide variety of odd jobs. Since 2019 she has been living in Berlin, Germany, where she is professionally engaged in software development.",
+    "paragraph1": "Rita Gonzalez Hesaynes is a writer and performer from Azul, Argentina. Having left her International Relations studies unfinished, she went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation and a wide variety of odd jobs. Since 2019 she has been living in Berlin, Germany, where she is professionally engaged in software development.",
     "paragraph2": "Her work focuses on poetry and often explores philosophical and existential issues emphasizing the common aspects of human experience despite epochal, geographical and cultural differences. Concepts from science, myth and history intertwine in pieces that avoid the merely anecdotal and lean towards the dramatic monologue and social satire.",
     "paragraph3": "She has published the collections *¡oh mitocondria!* (2015), *en la gran existencia* (2017), *neuro:mantra* (2018) and *Elfo Corporativo* (2021), alongside several chapbooks. Her writing has been translated into Portuguese, English and German, and has been featured in anthologies, school textbooks and various print and online magazines.",
     "paragraph4": "Rita performs regularly at spoken word events and competitions in both Spanish and English.",
@@ -64,7 +64,7 @@
     "bairesElfoTitle": "Presentation of *Elfo Corporativo* in Buenos Aires",
     "bairesElfoAlt": "Person in a white shirt reading into a microphone while holding an open book under stage lighting.",
     "samsaraTitle": "Performance of the poem 'Samsara'",
-    "samsaraAlt": "Author kneeling while reciting poetry at the center of a circle of seated and standing audience members.",
+    "samsaraAlt": "Person kneeling while reciting poetry at the center of a circle of seated and standing audience members.",
     "divinaTitle": "*De mis venas surgen cables*, videoclip by Divina Encarnación",
     "divinaAlt": "Person wearing a steampunk mask, a hat, and a neo-Victorian outfit, operating a machine in a workshop.",
     "berlinElfoTitle": "Presentation of *Elfo Corporativo* in Berlín",
@@ -78,6 +78,10 @@
     "bynTitle": "Reading performance Buenos Aires",
     "bynAlt": "Black-and-white photograph of a person reading from a printed sheet into a microphone, backlit.",
     "encuentroTitle": "Reading performance for *El Encuentro*",
-    "encuentroAlt": "Author with blue hair reading poetry into a microphone while holding printed pages under dim stage lighting."
+    "encuentroAlt": "Person with blue hair reading poetry into a microphone while holding printed pages under dim stage lighting."
+  },
+  "errors": {
+    "404label": "404 Error",
+    "404message": "This page does not exist."
   }
 }

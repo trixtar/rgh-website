@@ -19,19 +19,18 @@ import photo7 from '@/assets/images/lectura1.jpg';
 import photo8 from '@/assets/images/lectura2.jpg';
 import photo9 from '@/assets/images/el encuentro.jpg';
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
-  const { locale } = await params;
-
-  const t = await getTranslations({ locale, namespace: 'performance' });
+export async function generateMetadata() {
+  const t = await getTranslations('performance');
 
   return {
     title: `Rita Gonzalez Hesaynes | ${t('title')}`,
   };
 }
 
-export default async function Performance({ params }: { params: { locale: string } }) {
+export default async function Performance({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+
   const t = await getTranslations();
   const on = t('performance.on');
   const by = t('performance.by');

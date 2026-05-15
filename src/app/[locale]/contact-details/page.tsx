@@ -5,10 +5,8 @@ import { siSubstack, siInstagram, siWordpress, siFacebook, SimpleIcon } from 'si
 import NewTab from '@/components/ui/NewTab';
 import EmailReveal from '@/components/ui/EmailReveal';
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
-  const { locale } = await params;
-
-  const t = await getTranslations({ locale, namespace: 'contact' });
+export async function generateMetadata() {
+  const t = await getTranslations('contact');
 
   return {
     title: `Rita Gonzalez Hesaynes | ${t('title')}`,
@@ -44,11 +42,12 @@ const socials: SocialsInfo[] = [
   },
 ];
 
-export default async function ContactDetails({ params }: { params: { locale: string } }) {
+export default async function ContactDetails({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-
   setRequestLocale(locale);
+
   const t = await getTranslations('contact');
+
   return (
     <main className='main-container'>
       <div className='paragraph-text space-y-2'>

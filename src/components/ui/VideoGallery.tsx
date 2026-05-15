@@ -60,7 +60,7 @@ export default function VideoGallery ({ videos }: { videos: ArchivedVideo[] }) {
         {videos.map(video => (
           <li key={video.key}>
             <button onClick={() => handleClick(video)} aria-label={getButtonAriaLabel(video)} className={`group w-full relative overflow-hidden aspect-video flex items-center justify-center ${thumbnailHoverStyle} ${thumbnailFocusStyle}`}>
-              <Image src={video.thumbnail} alt='' fill className='object-cover group-active:invert' />
+              <Image src={video.thumbnail} alt='' fill sizes="(max-width: 768px) 100vw, 50vw" className='object-cover group-active:invert' />
               <div aria-hidden='true' className='w-24 h-24 text-lightneutral/80 z-10'>
                 {isInstagram(video.platform) ? <ArrowTopRightOnSquareIcon /> : <PlayIcon />}
               </div>
