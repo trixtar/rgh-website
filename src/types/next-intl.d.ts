@@ -1,6 +1,6 @@
-import en from '../../messages/en/messages.json';
+import englishMessages from '../messages/en/messages.json';
 
-type Messages = typeof en;
+type Messages = typeof englishMessages;
 
 declare module 'next-intl' {
   interface AppConfig {

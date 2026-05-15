@@ -1,5 +1,18 @@
 import { StaticImageData } from "next/image";
 
+export enum Locale {
+  EN = 'en',
+  ES = 'es',
+}
+
+export enum Pathname {
+  HOME = '/',
+  BIO = 'bio',
+  WORKS = 'works',
+  PERFORMANCE = 'performance',
+  CONTACT = 'contact',
+}
+
 export enum Platforms {
   YOUTUBE = 'YouTube',
   INSTAGRAM = 'Instagram',

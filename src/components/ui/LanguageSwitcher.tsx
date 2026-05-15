@@ -1,12 +1,13 @@
 'use client';
 
 import { useRouter, usePathname } from '@/i18n/navigation';
+import { Locale } from '@/lib/types';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: Locale.EN, name: 'English', flag: '🇬🇧' },
+  { code: Locale.ES, name: 'Español', flag: '🇪🇸' },
 ];
 
 export function LanguageSwitcher() {
@@ -14,14 +15,14 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
-  const currentLocale = params.locale as string;
+  const currentLocale = params.locale;
 
-  const handleLanguageChange = (locale: string) => {
+  const handleLanguageChange = (locale: Locale) => {
     router.replace(pathname, { locale });
   };
 
-  const getIsCurrent = (locale: string): boolean => locale === currentLocale;
-  const getUnderlineStyle = (locale: string): string => getIsCurrent(locale) ? 'underline underline-offset-3' : '';
+  const getIsCurrent = (locale: Locale): boolean => locale === currentLocale;
+  const getUnderlineStyle = (locale: Locale): string => getIsCurrent(locale) ? 'underline underline-offset-3' : '';
 
   const hoverStyle = 'cursor-pointer hover:underline hover:underline-offset-3';
   const focusStyle = 'focus:outline-2 focus:outline-offset-2 focus:outline-lightneutral';

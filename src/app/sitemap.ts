@@ -1,5 +1,6 @@
 import { routing } from '@/i18n/routing';
 import { getSeoUrls } from '@/lib/seo';
+import { Locale } from '@/lib/types';
 
 export default function sitemap() {
   const result = [];
@@ -8,7 +9,7 @@ export default function sitemap() {
     const urls = getSeoUrls(key as keyof typeof routing.pathnames);
 
     result.push({
-      url: urls.en,
+      url: urls[Locale.EN],
       alternates: {
         languages: urls
       },

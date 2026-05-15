@@ -1,9 +1,10 @@
-import { routing, Locale } from '@/i18n/routing';
+import { routing } from '@/i18n/routing';
 import { site } from '@/lib/site';
+import { Locale } from './types';
 
 type HrefMap = Record<Locale, string>;
 
-const locales: Locale[] = ['en', 'es'];
+const locales: Locale[] = [Locale.EN, Locale.ES];
 
 export function getSeoUrls(pathnameKey: keyof typeof routing.pathnames) {
   const value = routing.pathnames[pathnameKey];

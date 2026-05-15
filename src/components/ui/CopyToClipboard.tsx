@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface CopyToClipboardProps {
   textToCopy: string;
@@ -18,6 +18,11 @@ enum Status {
 export default function CopyToClipboard ({ textToShow, textToCopy, ariaDescribedById }: CopyToClipboardProps ) {
   const t = useTranslations('global');
   const [status, setStatus] = useState<Status>(Status.INITIAL);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    buttonRef.current?.focus();
+  }, []);
 
   useEffect(() => {
     if (status === Status.INITIAL) return;
@@ -44,7 +49,7 @@ export default function CopyToClipboard ({ textToShow, textToCopy, ariaDescribed
 
   return (
     <span>
-      <button onClick={copyToClipboard} aria-label={t('copyToClipboard')} aria-describedby={ariaDescribedById} className='basic-link-hover-style basic-link-active-style reset-focus text-mystery'>
+      <button ref={buttonRef} onClick={copyToClipboard} aria-label={t('copyToClipboard')} aria-describedby={ariaDescribedById} className='basic-link-hover-style basic-link-active-style reset-focus text-mystery'>
         <span aria-hidden='true'>{textToShow || t('copyToClipboard')}</span>
       </button>
       <span className='sr-only' aria-live='polite'>{getStatusText()}</span>

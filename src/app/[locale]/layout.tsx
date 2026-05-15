@@ -1,10 +1,11 @@
-import { Locale, routing } from '@/i18n/routing';
+import { routing } from '@/i18n/routing';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { getSeoUrls } from '@/lib/seo';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
+import { Locale } from '@/lib/types';
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
@@ -29,13 +30,35 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
       title: t('title'),
       description: t('description'),
       locale,
+      type: 'website',
     },
 
     twitter: {
-      card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-    }
+      card: 'summary_large_image',
+    },
+
+    icons: {
+      apple: '/apple-touch-icon.png',
+      icon: [
+        {
+          url: '/favicon-32x32.png',
+          sizes: '32x32',
+          type: 'image/png',
+        },
+        {
+          url: '/favicon-16x16.png',
+          sizes: '16x16',
+          type: 'image/png',
+        },
+        {
+          url: '/favicon.ico',
+        },
+      ],
+    },
+
+    manifest: '/manifest.webmanifest',
   };
 }
 
