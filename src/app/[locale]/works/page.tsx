@@ -2,6 +2,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Markdown from 'react-markdown';
 import Image from 'next/image';
 
+import { getBasicPageMetadata } from '@/lib/helpers';
+import { Pathname } from '@/lib/types';
+
 import ohmitocondria from '@/assets/images/oh mitocondria.jpg';
 import granexistencia from '@/assets/images/en la gran existencia.jpg';
 import neuromantra from '@/assets/images/neuromantra.jpg';
@@ -12,12 +15,11 @@ import balbucear from '@/assets/images/brabbeln babillage balbucear.webp';
 import Link from 'next/link';
 import NewTab from '@/components/ui/NewTab';
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations('works');
 
-  return {
-    title: `Rita Gonzalez Hesaynes | ${t('title')}`,
-  };
+  return getBasicPageMetadata({locale, pathname: Pathname.WORKS, localizedPageTitle: t('title')})
 }
 
 export default async function Works({ params }: { params: Promise<{ locale: string }> }) {
@@ -37,6 +39,7 @@ export default async function Works({ params }: { params: Promise<{ locale: stri
 
   return (
     <main className='main-container'>
+      <h1 className='sr-only'>{t('title')}</h1>
       <div className='text-lg dash-list-child [&>p]:pb-2'>
         <Markdown>{t('paragraph1')}</Markdown>
       </div>

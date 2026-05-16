@@ -1,11 +1,13 @@
+import { RGH_NAME } from '@/lib/constants';
+import { Pathname } from '@/lib/types';
 import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Rita Gonzalez Hesaynes',
-    short_name: 'Rita Gonzalez Hesaynes',
+    name: RGH_NAME,
+    short_name: RGH_NAME,
     description: 'Writer, performer, translator and software developer',
-    start_url: '/',
+    start_url: Pathname.HOME,
     display: 'standalone',
     background_color: '#ffffff',
     theme_color: '#ffffff',

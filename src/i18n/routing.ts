@@ -1,23 +1,26 @@
-import { Locale } from '@/lib/types';
+import { Locale, Pathname } from '@/lib/types';
 import { defineRouting } from 'next-intl/routing';
 
 export const routing = defineRouting({
   locales: [Locale.EN, Locale.ES],
   defaultLocale: Locale.EN,
   pathnames: {
-    '/': '/',
-    'bio': {
-      en: '/biography',
-      es: '/biografia',
+    [Pathname.HOME]: '/',
+    [Pathname.BIO]: {
+      [Locale.EN]: '/biography',
+      [Locale.ES]: '/biografia',
     },
-    'works': {
-      en: '/published-works',
-      es: '/obras-publicadas',
+    [Pathname.WORKS]: {
+      [Locale.EN]: '/published-works',
+      [Locale.ES]: '/obras-publicadas',
     },
-    'performance': 'performance',
-    'contact-details': {
-      en: '/contact',
-      es: '/contacto',
+    [Pathname.PERFORMANCE]: {
+      [Locale.EN]: '/performance',
+      [Locale.ES]: '/performance',
+    },
+    [Pathname.CONTACT]: {
+      [Locale.EN]: '/contact',
+      [Locale.ES]: '/contacto',
     },
   },
 });

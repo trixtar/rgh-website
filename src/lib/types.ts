@@ -7,16 +7,18 @@ export enum Locale {
 
 export enum Pathname {
   HOME = '/',
-  BIO = 'bio',
-  WORKS = 'works',
-  PERFORMANCE = 'performance',
-  CONTACT = 'contact',
+  BIO = '/bio',
+  WORKS = '/works',
+  PERFORMANCE = '/performance',
+  CONTACT = '/contact',
 }
 
 export enum Platforms {
   YOUTUBE = 'YouTube',
   INSTAGRAM = 'Instagram',
 }
+
+export type HrefMap = Record<Locale, string>;
 
 export interface ArchivedVideo {
   key: string;

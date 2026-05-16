@@ -31,7 +31,7 @@
     "title": "Homepage"
   },
   "bio": {
-    "title": "Bio",
+    "title": "About the author",
     "paragraph1": "Rita Gonzalez Hesaynes is a writer and performer from Azul, Argentina. Having left her International Relations studies unfinished, she went on to obtain a Licentiate degree in Literature (Universidad de Buenos Aires) while doing teaching, writing, translation and a wide variety of odd jobs. Since 2019 she has been living in Berlin, Germany, where she is professionally engaged in software development.",
     "paragraph2": "Her work focuses on poetry and often explores philosophical and existential issues emphasizing the common aspects of human experience despite epochal, geographical and cultural differences. Concepts from science, myth and history intertwine in pieces that avoid the merely anecdotal and lean towards the dramatic monologue and social satire.",
     "paragraph3": "She has published the collections *¡oh mitocondria!* (2015), *en la gran existencia* (2017), *neuro:mantra* (2018) and *Elfo Corporativo* (2021), alongside several chapbooks. Her writing has been translated into Portuguese, English and German, and has been featured in anthologies, school textbooks and various print and online magazines.",
@@ -55,7 +55,7 @@
     "by": "produced by"
   },
   "contact": {
-    "title": "Contact",
+    "title": "Contact information",
     "paragraph1": "Email me at",
     "paragraph2": "You can also find me on social media",
     "verboseEmail": "ritagonzalezhesaynes [at] gmail.com"

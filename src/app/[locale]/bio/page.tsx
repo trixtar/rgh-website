@@ -3,13 +3,14 @@ import Image from 'next/image';
 import Markdown from 'react-markdown';
 import photo1 from '@/assets/images/elfo2.jpg';
 import photo2 from '@/assets/images/skiba3.jpg';
+import { Pathname } from '@/lib/types';
+import { getBasicPageMetadata} from '@/lib/helpers';
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations('bio');
 
-  return {
-    title: `Rita Gonzalez Hesaynes | ${t('title')}`,
-  };
+  return getBasicPageMetadata({locale, pathname: Pathname.BIO, localizedPageTitle: t('title')})
 }
 
 export default async function Bio({ params }: { params: Promise<{ locale: string }> }) {
@@ -21,6 +22,7 @@ export default async function Bio({ params }: { params: Promise<{ locale: string
   return (
     <main className='main-container'>
       <article>
+        <h1 className='sr-only'>{t('title')}</h1>
         <div className='flex flex-col items-end gap-6 sm:flex-row-reverse'>
           <div className='paragraph-text space-y-4'>
             <Markdown>{t('paragraph1')}</Markdown>

@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import VideoGallery from '@/components/ui/VideoGallery';
 import PhotoGallery from '@/components/ui/PhotoGallery';
-import { ArchivedPhoto, ArchivedVideo, Platforms } from '@/lib/types';
+import { getBasicPageMetadata } from '@/lib/helpers';
+import { ArchivedPhoto, ArchivedVideo, Pathname, Platforms } from '@/lib/types';
 
 import thumb1 from '@/assets/thumbnails/videos/1postits.jpg';
 import thumb2 from '@/assets/thumbnails/videos/2violenciadomestica.jpg';
@@ -19,12 +20,11 @@ import photo7 from '@/assets/images/lectura1.jpg';
 import photo8 from '@/assets/images/lectura2.jpg';
 import photo9 from '@/assets/images/el encuentro.jpg';
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations('performance');
 
-  return {
-    title: `Rita Gonzalez Hesaynes | ${t('title')}`,
-  };
+  return getBasicPageMetadata({locale, pathname: Pathname.PERFORMANCE, localizedPageTitle: t('title')})
 }
 
 export default async function Performance({ params }: { params: Promise<{ locale: string }> }) {
@@ -133,6 +133,7 @@ export default async function Performance({ params }: { params: Promise<{ locale
 
   return (
     <main className='main-container'>
+      <h1 className='sr-only'>{t('performance.title')}</h1>
       <section>
         <h2 className='subtitle'>{t('performance.subtitleVideos')}</h2>
         <p className='pb-3 paragraph-text'>{t('performance.paragraph1')}</p>

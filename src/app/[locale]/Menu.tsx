@@ -1,7 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link, usePathname } from '@/i18n/navigation';
+import { Link, usePathname} from '@/i18n/navigation';
+import { Pathname } from '@/lib/types';
 
 export default function Menu({
   isInNavbar,
@@ -16,16 +17,13 @@ export default function Menu({
   const pathname = usePathname();
 
   const menuItems = [
-    { href: 'bio', label: t('bio') },
-    { href: 'works', label: t('works') },
-    { href: 'performance', label: t('performance') },
-    { href: 'contact-details', label: t('contact') },
+    { href: Pathname.BIO, label: t('bio') },
+    { href: Pathname.WORKS, label: t('works') },
+    { href: Pathname.PERFORMANCE, label: t('performance') },
+    { href: Pathname.CONTACT, label: t('contact') },
   ] as const;
 
-  type MenuItem = (typeof menuItems)[number];
-  type Href = MenuItem['href'];
-
-  const isCurrent = (href: Href): boolean => pathname === `/${href}`;
+  const isCurrent = (href: Pathname): boolean => pathname === href;
 
   let containerStyle = 'flex flex-col items-center font-catchy font-bold mx-auto';
   let linkStyle = 'inline-flex items-center justify-center py-3 text-4xl md:text-5xl';
@@ -52,7 +50,7 @@ export default function Menu({
     currentStyle = 'bg-midneutral';
   }
 
-  const getLinkStyle = (href: Href): string => {
+  const getLinkStyle = (href: Pathname): string => {
     if (isCurrent(href)) {
       return `${linkStyle} ${hoverStyle} ${focusStyle} ${activeStyle} ${currentStyle}`;
     }

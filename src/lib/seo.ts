@@ -1,22 +1,24 @@
 import { routing } from '@/i18n/routing';
-import { site } from '@/lib/site';
-import { Locale } from './types';
-
-type HrefMap = Record<Locale, string>;
+import { BASE_URL } from './constants';
+import { Locale, Pathname, HrefMap } from './types';
 
 const locales: Locale[] = [Locale.EN, Locale.ES];
 
-export function getSeoUrls(pathnameKey: keyof typeof routing.pathnames) {
-  const value = routing.pathnames[pathnameKey];
+export const getSeoUrls = (pathname: Pathname):HrefMap => {
+  const slugValues = routing.pathnames[pathname];
 
-  const urls: HrefMap = {} as HrefMap;
+  const urls = {} as HrefMap;
 
   for (const locale of locales) {
-    if (pathnameKey === '/') {
-      urls[locale] = `${site.baseUrl}/${locale}`;
-    } else if (typeof value !== 'string') {
-      urls[locale] = `${site.baseUrl}/${locale}${value[locale]}`;
+    let localizedPath: string;
+
+    if (typeof slugValues === 'string') {
+      localizedPath = slugValues;
+    } else {
+      localizedPath = slugValues[locale];
     }
+
+    urls[locale] = `${BASE_URL}/${locale}${localizedPath}`;
   }
 
   return urls;

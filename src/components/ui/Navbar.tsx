@@ -4,6 +4,9 @@ import Menu from '@/app/[locale]/Menu';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useEffect, useRef, useState } from 'react';
+import { getIsHomepage } from '@/lib/helpers';
+import { Pathname } from '@/lib/types';
+import { RGH_NAME } from '@/lib/constants';
 
 const NavMenu = ({
   onClick,
@@ -79,19 +82,19 @@ export default function Navbar() {
   };
 
   const pathname = usePathname();
-  const title = 'Rita Gonzalez Hesaynes';
-  const isHomepage = pathname === '/';
+  const isHomepage = getIsHomepage(pathname);
+
   const nameStyle = 'font-semibold text-3xl font-compact';
   const linkStyle = 'basic-link-hover-style reset-focus basic-link-active-style';
 
   return (
     <header className='p-4 flex justify-between items-end'>
       {isHomepage ? (
-        <div className={nameStyle}>{title}</div>
+        <div className={nameStyle}>{RGH_NAME}</div>
       ) : (
         <>
-          <Link className={`${nameStyle} ${linkStyle}`} onClick={() => setDropdownShown(false)} href='/'>
-            {title}
+          <Link className={`${nameStyle} ${linkStyle}`} onClick={() => setDropdownShown(false)} href={Pathname.HOME}>
+            {RGH_NAME}
           </Link>
           <NavMenu onClick={handleClick} isDropdownShown={isDropdownShown} />
         </>

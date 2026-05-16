@@ -31,7 +31,7 @@
     "title": "Página Principal"
   },
   "bio": {
-    "title": "Bio",
+    "title": "Acerca de la autora",
     "paragraph1": "Rita Gonzalez Hesaynes es una escritora y performer nacida en Azul, Argentina. Tras dejar inconclusos sus estudios en Relaciones Internacionales, obtuvo la Licenciatura en Letras en la Universidad de Buenos Aires y trabajó en docencia, escritura, traducción y una amplia variedad de ocupaciones. Desde el año 2019 reside en Berlín, Alemania, donde se dedica profesionalmente al desarrollo de software.",
     "paragraph2": "Su trabajo se centra en la poesía y a menudo explora cuestiones filosóficas y existenciales que enfatizan los aspectos comunes de la experiencia humana a pesar de diferencias de época, geográficas y culturales. Diversos conceptos científicos y figuras del mito y la historia se entrelazan en poemas que esquivan lo meramente anecdótico y derivan hacia el monólogo dramático y la sátira social.",
     "paragraph3": "Ha publicado los poemarios *¡oh mitocondria!* (2015), *en la gran existencia* (2017), *neuro:mantra* (2018) y *Elfo Corporativo* (2021), además de varias plaquettes. Sus textos han sido traducidos al portugués, inglés y alemán, y han aparecido en antologías, manuales escolares y diversas revistas impresas y digitales.",
@@ -55,7 +55,7 @@
     "by": "producido por"
   },
   "contact": {
-    "title": "Contacto",
+    "title": "Información de contacto",
     "paragraph1": "Escribime un mail a",
     "paragraph2": "También podés encontrarme en redes sociales",
     "verboseEmail": "ritagonzalezhesaynes [arroba] gmail.com"

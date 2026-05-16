@@ -2,8 +2,7 @@
 
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { Locale } from '@/lib/types';
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 
 const languages = [
   { code: Locale.EN, name: 'English', flag: '🇬🇧' },
@@ -14,8 +13,7 @@ export function LanguageSwitcher() {
   const t = useTranslations('language-selector');
   const pathname = usePathname();
   const router = useRouter();
-  const params = useParams();
-  const currentLocale = params.locale;
+  const currentLocale = useLocale();
 
   const handleLanguageChange = (locale: Locale) => {
     router.replace(pathname, { locale });
