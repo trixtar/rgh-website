@@ -5,7 +5,7 @@ A multilingual personal portfolio built with **Next.js 16 (App Router)**, **next
 ## Features
 
 - Internationalized content (EN / ES)
-- Next.js App Router architecture
+- Locale-specific routing and metadata
 - Tailwind-based responsive design
 - Mobile-first navigation
 - Video gallery with modal playback
