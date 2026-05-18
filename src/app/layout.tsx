@@ -1,8 +1,8 @@
-import { BASE_URL } from "@/lib/constants";
+import { site } from "@/lib/site";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(site.baseUrl),
 
   icons: {
     apple: '/apple-touch-icon.png',
