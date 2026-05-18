@@ -33,7 +33,7 @@ export function LanguageSwitcher() {
         {languages.map(lang => (
           <li key={lang.code}>
             <button className={`px-1 font-compact ${hoverStyle} ${focusStyle} ${activeStyle} ${getUnderlineStyle(lang.code)}`} onClick={() => handleLanguageChange(lang.code)} aria-current={getIsCurrent(lang.code)}>
-              {lang.flag}<span> {lang.name}</span>
+              {lang.flag}<span lang={!getIsCurrent(lang.code) ? lang.code : undefined}> {lang.name}</span>
             </button>
           </li>
         ))}

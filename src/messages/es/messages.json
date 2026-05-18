@@ -44,7 +44,8 @@
     "paragraph1": "Publiqué estos libros de poesía:\n\n- *¡Oh mitocondria!* (2015, añosluz editora)\n- *En la gran existencia* (2017, añosluz editora)\n- *neuro:mantra* (2018, ediciones Abend)\n- *Elfo corporativo* (2021, Promesa Editorial)",
     "paragraph2": "como asimismo las plaquettes:\n\n- *La Belle Époque* (2017, Difusión A/terna)\n- *Una intensa hierba* (in \"La caja negra\", 2017, No es como una rubia en el avión)\n- *Brabbeln, Babillage, Balbucear* (2023, Siesta Verlag, en coautoría)",
     "altText1": "Tapa de",
-    "altText2": "en"
+    "altText2": "en",
+    "sectionAriaLabel": "Obras publicadas con tapas, títulos y enlaces"
   },
   "performance": {
     "title": "Archivo de performance",
@@ -58,7 +59,9 @@
     "title": "Información de contacto",
     "paragraph1": "Escribime un mail a",
     "paragraph2": "También podés encontrarme en redes sociales",
-    "verboseEmail": "ritagonzalezhesaynes [arroba] gmail.com"
+    "verboseEmail": "ritagonzalezhesaynes [arroba] gmail.com",
+    "ariaLabelEmail": "Dirección de mail",
+    "ariaLabelSocials": "Enlaces a redes sociales"
   },
   "photoLabels": {
     "bairesElfoTitle": "Presentación de *Elfo Corporativo* en Buenos Aires",

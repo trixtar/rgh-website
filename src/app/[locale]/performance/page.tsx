@@ -131,16 +131,19 @@ export default async function Performance({ params }: { params: Promise<{ locale
     }
   ];
 
+  const videoGalleryId = 'video-gallery-id';
+  const photoGalleryId = 'photo-gallery-id';
+
   return (
     <main className='main-container'>
       <h1 className='sr-only'>{t('performance.title')}</h1>
-      <section>
-        <h2 className='subtitle'>{t('performance.subtitleVideos')}</h2>
+      <section aria-labelledby={videoGalleryId}>
+        <h2 id={videoGalleryId} className='subtitle'>{t('performance.subtitleVideos')}</h2>
         <p className='pb-3 paragraph-text'>{t('performance.paragraph1')}</p>
         <VideoGallery videos={videos} />
       </section>
-      <section className='pt-9'>
-        <h2 className='subtitle'>{t('performance.subtitlePhotos')}</h2>
+      <section className='pt-9' aria-labelledby={photoGalleryId}>
+        <h2 id={photoGalleryId} className='subtitle'>{t('performance.subtitlePhotos')}</h2>
         <PhotoGallery photos={photos} />
       </section>
     </main>
