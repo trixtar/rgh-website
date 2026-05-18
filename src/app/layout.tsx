@@ -1,5 +1,8 @@
-import { site } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Metadata } from "next";
+
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.baseUrl),
@@ -27,5 +30,11 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      {children}
+      <Analytics />
+      <SpeedInsights />
+    </>
+  );
 }
