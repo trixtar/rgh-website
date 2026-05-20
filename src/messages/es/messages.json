@@ -19,6 +19,7 @@
     "bio": "Bio",
     "works": "Obras",
     "performance": "Performance",
+    "blog": "Blog",
     "contact": "Contacto",
     "label": "Menú principal",
     "open": "Abrir menú",
@@ -54,6 +55,10 @@
     "paragraph1": "Una breve selección de videoclips y grabaciones de lectura y performance a modo de archivo personal:",
     "on": "en",
     "by": "producido por"
+  },
+  "blog": {
+    "title": "Artículos y publicaciones",
+    "paragraph1": "Las publicaciones son importadas de Substack."
   },
   "contact": {
     "title": "Información de contacto",

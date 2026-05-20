@@ -18,6 +18,10 @@ export const routing = defineRouting({
       [Locale.EN]: '/performance',
       [Locale.ES]: '/performance',
     },
+    [Pathname.BLOG]: {
+      [Locale.EN]: '/blog',
+      [Locale.ES]: '/blog',
+    },
     [Pathname.CONTACT]: {
       [Locale.EN]: '/contact',
       [Locale.ES]: '/contacto',

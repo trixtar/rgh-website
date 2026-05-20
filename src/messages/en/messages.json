@@ -19,6 +19,7 @@
     "bio": "Bio",
     "works": "Works",
     "performance": "Performance",
+    "blog": "Blog",
     "contact": "Contact",
     "label": "Main menu",
     "open": "Open menu",
@@ -54,6 +55,10 @@
     "paragraph1": "A brief selection of videoclips and reading and performance recordings, kept as personal archive:",
     "on": "on",
     "by": "produced by"
+  },
+  "blog": {
+    "title": "Blog posts and articles",
+    "paragraph1": "Posts are currently published in Spanish and imported from Substack."
   },
   "contact": {
     "title": "Contact information",

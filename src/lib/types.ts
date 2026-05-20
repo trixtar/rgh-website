@@ -10,6 +10,7 @@ export enum Pathname {
   BIO = '/bio',
   WORKS = '/works',
   PERFORMANCE = '/performance',
+  BLOG = '/blog',
   CONTACT = '/contact',
 }
 

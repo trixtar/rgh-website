@@ -20,6 +20,7 @@ export default function Menu({
     { href: Pathname.BIO, label: t('bio') },
     { href: Pathname.WORKS, label: t('works') },
     { href: Pathname.PERFORMANCE, label: t('performance') },
+    { href: Pathname.BLOG, label: t('blog') },
     { href: Pathname.CONTACT, label: t('contact') },
   ] as const;
 
