@@ -7,6 +7,23 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.baseUrl),
 
+  openGraph: {
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Rita Gonzalez Hesaynes',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/opengraph.jpg'],
+  },
+
   icons: {
     apple: '/apple-touch-icon.png',
     icon: [
