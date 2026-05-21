@@ -21,6 +21,12 @@ export enum Platforms {
 
 export type HrefMap = Record<Locale, string>;
 
+export interface Book {
+  title: string;
+  imageSrc: StaticImageData;
+  url?: string;
+}
+
 export interface ArchivedVideo {
   key: string;
   title: string;
@@ -36,4 +42,11 @@ export interface ArchivedPhoto {
   title: string;
   src: StaticImageData;
   alt: string;
+}
+
+export interface BlogPost {
+  title?: string;
+  url?: string;
+  snippet?: string;
+  imageUrl?: string;
 }

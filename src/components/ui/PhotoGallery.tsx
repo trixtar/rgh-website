@@ -13,8 +13,8 @@ export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
   const [selectedPhoto, setSelectedPhoto] = useState<ArchivedPhoto>();
   const closeModal = () => setSelectedPhoto(undefined);
 
-  const thumbnailHoverStyle = 'cursor-pointer block-link-hover-style hover:outline-offset-3';
-  const thumbnailFocusStyle = 'reset-focus-block focus:outline-offset-3';
+  const thumbnailHoverStyle = 'cursor-pointer card-link-hover-style hover:outline-offset-3';
+  const thumbnailFocusStyle = 'card-reset-focus focus:outline-offset-3';
 
   const getButtonAriaLabel = (photo: ArchivedPhoto): string => `${t('openPhoto')}: ${sanitizeMarkdownItalics(photo.title)}`
 
@@ -22,7 +22,7 @@ export default function PhotoGallery({ photos }: { photos: ArchivedPhoto[] }) {
 
   return (
     <>
-      <ul className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+      <ul className='grid-container grid-cols-2 md:grid-cols-4'>
         {photos.map(photo => (
           <li key={photo.key}>
             <button aria-label={getButtonAriaLabel(photo)} onClick={() => setSelectedPhoto(photo)} className={`relative w-full h-64 overflow-hidden rounded-xl ${thumbnailHoverStyle} ${thumbnailFocusStyle} group`}>

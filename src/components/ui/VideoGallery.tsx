@@ -49,14 +49,14 @@ export default function VideoGallery ({ videos }: { videos: ArchivedVideo[] }) {
     return `${t('playVideo')}: ${sanitizedTitle}`;
   };
 
-  const thumbnailHoverStyle = 'cursor-pointer block-link-hover-style hover:outline-offset-3';
-  const thumbnailFocusStyle = 'reset-focus-block focus:outline-offset-3';
+  const thumbnailHoverStyle = 'cursor-pointer card-link-hover-style hover:outline-offset-3';
+  const thumbnailFocusStyle = 'card-reset-focus focus:outline-offset-3';
 
   const modalLabelledById = 'video-title';
 
   return (
     <>
-      <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+      <ul className='grid-container grid-cols-1 md:grid-cols-2'>
         {videos.map(video => (
           <li key={video.key}>
             <button onClick={() => handleClick(video)} aria-label={getButtonAriaLabel(video)} className={`group w-full relative overflow-hidden aspect-video flex items-center justify-center ${thumbnailHoverStyle} ${thumbnailFocusStyle}`}>
@@ -71,8 +71,7 @@ export default function VideoGallery ({ videos }: { videos: ArchivedVideo[] }) {
               </Markdown>
               <span aria-hidden='true'> | </span>
               <Link href={getWatchUrl(video)} target='_blank' rel='noopener noreferrer' className='basic-link-hover-style basic-link-active-style reset-focus'>
-                <span>{`${t('watchOn')} ${video.platform}`}</span>
-                <NewTab />
+                <span>{`${t('watchOn')} ${video.platform}`}<NewTab /></span>
               </Link>
             </div>
           </li>
@@ -87,7 +86,7 @@ export default function VideoGallery ({ videos }: { videos: ArchivedVideo[] }) {
               title={sanitizeMarkdownItalics(selectedVideo.title)}
               className={`absolute inset-0 w-full h-full`}
               allowFullScreen
-              allow='autoplay; encrypted-media; picture-in-picture; clipboard-write;'
+              allow='autoplay; encrypted-media; picture-in-picture; fullscreen;'
               loading='lazy'
             />
           </div>

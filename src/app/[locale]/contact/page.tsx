@@ -70,8 +70,7 @@ export default async function ContactDetails({ params }: { params: Promise<{ loc
                   <svg role='img' viewBox='0 0 24 24' className='w-5 h-5' fill={`#${social.icon.hex}`} aria-hidden='true'>
                     <path d={social.icon.path} />
                   </svg> 
-                  <span className='pl-2 pt-1'>{social.label}</span>
-                  <NewTab />
+                  <span className='pl-2 pt-1'>{social.label}<NewTab /></span>
                 </Link>
               </li>
             ))}

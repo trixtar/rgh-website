@@ -58,7 +58,8 @@
   },
   "blog": {
     "title": "Artículos y publicaciones",
-    "paragraph1": "Las publicaciones son importadas de Substack."
+    "paragraph1": "Las publicaciones son importadas de Substack.",
+    "sectionAriaLabel": "Lista de publicaciones con enlaces"
   },
   "contact": {
     "title": "Información de contacto",

@@ -52,13 +52,14 @@
     "title": "Performance archive",
     "subtitleVideos": "Video Archive",
     "subtitlePhotos": "Photo Gallery",
-    "paragraph1": "A brief selection of videoclips and reading and performance recordings, kept as personal archive:",
+    "paragraph1": "A brief selection of videoclips and reading and performance recordings, kept as personal archive.",
     "on": "on",
     "by": "produced by"
   },
   "blog": {
     "title": "Blog posts and articles",
-    "paragraph1": "Posts are currently published in Spanish and imported from Substack."
+    "paragraph1": "Posts are currently published in Spanish and imported from Substack.",
+    "sectionAriaLabel": "List of blog posts with links"
   },
   "contact": {
     "title": "Contact information",
