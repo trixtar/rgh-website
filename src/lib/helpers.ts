@@ -41,3 +41,13 @@ export const getBasicPageMetadata = ({
     },
   };
 };
+
+export const decodeHtml = (str: string = '') =>
+  str.replace(/&#(\d+);/g, (_, n) =>
+    String.fromCharCode(Number(n))
+  ).replace(/&lt;/g, '<')
+   .replace(/&gt;/g, '>')
+   .replace(/&amp;/g, '&')
+   .replace(/&quot;/g, '"')
+   .replace(/&#39;/g, "'");
+

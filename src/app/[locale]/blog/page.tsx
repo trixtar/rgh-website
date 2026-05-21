@@ -1,23 +1,45 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Parser from 'rss-parser';
+import { XMLParser } from 'fast-xml-parser';
 
-import { getBasicPageMetadata } from '@/lib/helpers';
+import { decodeHtml, getBasicPageMetadata } from '@/lib/helpers';
 import { SUBSTACK_RSS_FEED } from '@/lib/constants';
 import { CardGalleryItem, Pathname } from '@/lib/types';
 import CardGallery from '@/components/ui/CardGallery';
 
-const parser = new Parser();
+const parser = new XMLParser({
+  ignoreAttributes: false,
+  attributeNamePrefix: '@_',
+});
+
+const extractImage = (item: any) => {
+  const enclosureImage = item.enclosure?.['@_url'];
+
+  const mediaImage =
+    item['media:content']?.['@_url'] ||
+    item['media:thumbnail']?.['@_url'];
+
+  // fallback: extracts first <img> from description
+  const html = item.description ?? '';
+  const match = html.match(/<img[^>]+src="([^">]+)"/);
+
+  return enclosureImage || mediaImage || match?.[1] || null;
+}
 
 const getSubstackPosts = async (): Promise<CardGalleryItem[]> => {
-  const feed = await parser.parseURL(SUBSTACK_RSS_FEED);
+  const xml = await fetch(SUBSTACK_RSS_FEED).then(res => res.text());
 
-  return feed.items.map(item => ({
-    key: item.isoDate as string,
-    title: item.title,
-    url: item.link,
-    subtitle: item.contentSnippet,
-    imageSrc: item.enclosure?.url,
-  }));
+  const data = parser.parse(xml);
+
+  const items = data.rss?.channel?.item || [];
+
+  return items.map((item: any) => ({
+      key: item.link,
+      title: item.title,
+      url: item.link,
+      subtitle: decodeHtml(item.description ?? ''),
+      imageSrc: extractImage(item),
+    })
+  );
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
