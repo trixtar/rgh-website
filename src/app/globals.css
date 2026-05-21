@@ -46,6 +46,9 @@
   .book-container {
     @apply p-1 h-full flex flex-col items-center justify-center;
   }
+  .card-container {
+    @apply p-1 h-full flex flex-col justify-center;
+  }
   .post-container {
     @apply p-1 h-full;
   }

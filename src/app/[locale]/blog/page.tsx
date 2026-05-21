@@ -1,21 +1,22 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Parser from 'rss-parser';
 
-import BlogPosts from '@/components/ui/BlogPosts';
 import { getBasicPageMetadata } from '@/lib/helpers';
 import { SUBSTACK_RSS_FEED } from '@/lib/constants';
-import { BlogPost, Pathname } from '@/lib/types';
+import { CardGalleryItem, Pathname } from '@/lib/types';
+import CardGallery from '@/components/ui/CardGallery';
 
 const parser = new Parser();
 
-const getSubstackPosts = async (): Promise<BlogPost[]> => {
+const getSubstackPosts = async (): Promise<CardGalleryItem[]> => {
   const feed = await parser.parseURL(SUBSTACK_RSS_FEED);
 
   return feed.items.map(item => ({
+    key: item.isoDate as string,
     title: item.title,
     url: item.link,
-    snippet: item.contentSnippet,
-    imageUrl: item.enclosure?.url,
+    subtitle: item.contentSnippet,
+    imageSrc: item.enclosure?.url,
   }));
 };
 
@@ -39,7 +40,7 @@ export default async function Blog({ params }: { params: Promise<{ locale: strin
       <p className='paragraphText'>{t('paragraph1')}</p>
       {posts && posts?.length && (
         <section aria-label={t('sectionAriaLabel')}>
-          <BlogPosts posts={posts} />
+          <CardGallery items={posts} gridExtraClasses='grid-cols-1 sm:grid-cols-2 md:grid-cols-3' imageAspectStyle='aspect-[4/3]' imageSizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw' />
         </section>
       )}
     </main>

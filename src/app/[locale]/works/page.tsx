@@ -1,8 +1,10 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Markdown from 'react-markdown';
+import { StaticImageData } from 'next/image';
 
+import CardGallery from '@/components/ui/CardGallery';
 import { getBasicPageMetadata } from '@/lib/helpers';
-import { Book, Pathname } from '@/lib/types';
+import { Pathname } from '@/lib/types';
 
 import ohmitocondria from '@/assets/images/oh mitocondria.jpg';
 import granexistencia from '@/assets/images/en la gran existencia.jpg';
@@ -11,7 +13,6 @@ import elfocorporativo from '@/assets/images/elfo corporativo.jpg';
 import belleepoque from '@/assets/images/la belle epoque.jpg';
 import lacajanegra from '@/assets/images/la caja negra.jpg';
 import balbucear from '@/assets/images/brabbeln babillage balbucear.webp';
-import BookGallery from '@/components/ui/BookGallery';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -22,6 +23,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     pathname: Pathname.WORKS,
     localizedPageTitle: t('title'),
   });
+}
+
+interface Book {
+  title: string;
+  imageSrc: StaticImageData;
+  url?: string;
 }
 
 const books: Book[] = [
@@ -63,6 +70,15 @@ export default async function Works({ params }: { params: Promise<{ locale: stri
   setRequestLocale(locale);
 
   const t = await getTranslations('works');
+  const items = books.map(({ title, url, imageSrc }) => {
+    return {
+      key: title,
+      title,
+      url,
+      imageSrc,
+      imageAltText: `${t('altText1')} ${title}`,
+    };
+  });
 
   return (
     <main className='main-container space-y-3'>
@@ -74,7 +90,7 @@ export default async function Works({ params }: { params: Promise<{ locale: stri
         <Markdown>{t('paragraph2')}</Markdown>
       </div>
       <section aria-label={t('sectionAriaLabel')}>
-        <BookGallery books={books} />
+        <CardGallery items={items} imageAspectStyle='aspect-[2/3]' isTextCentered />
       </section>
     </main>
   );

@@ -13,7 +13,8 @@
     "copyToClipboard": "copiar al portapapeles",
     "revealEmail": "revelar e-mail",
     "copied": "copiado",
-    "copyError": "Error al copiar"
+    "copyError": "Error al copiar",
+    "imageNotAvailable": "Imagen no disponible"
   },
   "menu": {
     "bio": "Bio",
