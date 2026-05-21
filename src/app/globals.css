@@ -85,4 +85,7 @@
   .subtitle {
     @apply pb-5 font-catchy font-bold text-3xl text-center;
   }
+  .subtle-drop-shadow {
+    @apply drop-shadow-[0_1px_2px_rgba(243,244,255,0.5)] drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)];
+  }
 }

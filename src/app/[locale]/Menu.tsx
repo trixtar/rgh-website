@@ -44,7 +44,7 @@ export default function Menu({
 
   if (isDropdown) {
     containerStyle = 'flex flex-col items-end font-compact space-y-2 md:hidden';
-    linkStyle = 'block pt-2 pb-3 px-4 shadow-md/30 rounded-xl text-2xl text-lightneutral';
+    linkStyle = 'block pt-2 pb-3 px-4 rounded-xl text-2xl text-lightneutral subtle-drop-shadow';
     hoverStyle = 'hover:underline hover:decoration-lightneutral hover:decoration-dotted hover:underline-offset-4';
     activeStyle = 'basic-link-active-style active:text-darkneutral';
     nonCurrentStyle = 'bg-mystery';
