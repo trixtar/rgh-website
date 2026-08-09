@@ -38,7 +38,7 @@ const Card = ({
   hasLink,
   imageNotAvailable,
 }: CardProps): React.ReactNode => (
-  <figure className={`card-container`}>
+  <figure className='p-1 h-full flex flex-col'>
     <div className={`relative w-full ${aspectStyle}`}>
       {imageSrc ? (
         <Image src={imageSrc} fill className='object-cover' alt={altText || ''} sizes={sizes} />
@@ -47,8 +47,8 @@ const Card = ({
       )}
     </div>
     {title && (
-      <figcaption className={`flex flex-col ${isTextCentered ? 'items-center' : ''}`}>
-        <span className='card-caption'>
+      <figcaption className={`flex flex-col`}>
+        <span className={`pt-1 font-compact text-lg ${isTextCentered ? 'text-center' : ''}`}>
           {title}
           {hasLink && <NewTab />}
         </span>

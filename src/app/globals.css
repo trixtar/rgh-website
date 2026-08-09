@@ -43,18 +43,6 @@
   .dash-list-child {
     @apply [&_ul>li]:list-none [&_ul>li]:before:content-['-'] [&_ul>li]:before:mr-2;
   }
-  .book-container {
-    @apply p-1 h-full flex flex-col items-center justify-center;
-  }
-  .card-container {
-    @apply p-1 h-full flex flex-col justify-center;
-  }
-  .post-container {
-    @apply p-1 h-full;
-  }
-  .card-caption {
-    @apply pt-1 font-compact text-lg;
-  }
 }
 
 @layer utilities {
