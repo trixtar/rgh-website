@@ -26,7 +26,15 @@ const extractImage = (item: any) => {
 }
 
 const getSubstackPosts = async (): Promise<CardGalleryItem[]> => {
-  const xml = await fetch(SUBSTACK_RSS_FEED).then(res => res.text());
+  const response = await fetch(SUBSTACK_RSS_FEED, {
+    next: { revalidate: 3600 },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Substack RSS: ${response.status}`);
+  }
+
+  const xml = await response.text();
 
   const data = parser.parse(xml);
 
